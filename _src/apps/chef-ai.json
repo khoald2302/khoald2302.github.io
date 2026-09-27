@@ -1,0 +1,102 @@
+{
+  "slug": "chef-ai",
+  "name": "Chef AI: Fridge Recipes",
+  "device_name": "Chef",
+  "tagline": "Recipe ideas built from the ingredients you already have.",
+  "app_store_id": "6772408064",
+  "contact_email": "khoald2302.ai@gmail.com",
+  "last_updated": "2026-09-27",
+
+  "ads": false,
+  "tracking": false,
+  "storage_summary": "Your pantry, recipes, meal plans and profile are stored only on your device.",
+
+  "ai_consent": {
+    "screen_name": "AI & Your Privacy",
+    "withdraw": "Settings → Chef AI → Share data with AI"
+  },
+
+  "processors": {
+    "openai": {
+      "name": "OpenAI",
+      "purpose": "Generates recipes, meal plans and cooking answers, and estimates calories from food photos.",
+      "data": "the text, transcribed voice, receipt text and food photos you submit to AI features, plus the dietary profile and goals used to tailor results",
+      "policy_url": "https://openai.com/policies/privacy-policy/",
+      "requires_consent": true
+    },
+    "magichour": {
+      "name": "Magic Hour",
+      "purpose": "Creates a thumbnail image for a recipe.",
+      "data": "a short text description of the recipe — no photos and no personal data",
+      "policy_url": "https://magichour.ai/privacy-policy",
+      "requires_consent": true
+    },
+    "apple_speech": {
+      "name": "Apple (Speech Recognition)",
+      "purpose": "Turns your voice into text when you speak ingredients or cook-mode commands.",
+      "data": "the audio of your voice input, while you are speaking",
+      "policy_url": "https://www.apple.com/legal/privacy/"
+    },
+    "firebase": {
+      "name": "Google Firebase (Analytics, Crashlytics, Remote Config)",
+      "purpose": "Tells us which features are used, reports crashes, and delivers app configuration. Never used for advertising or cross-app tracking.",
+      "data": "in-app usage events, device model, OS version, app-generated identifiers and crash logs",
+      "policy_url": "https://firebase.google.com/support/privacy"
+    }
+  },
+
+  "data_sent": [
+    { "what": "Ingredients, recipe requests and chat messages you type or speak", "to": "openai", "why": "Generate recipes and answers", "user_content": true },
+    { "what": "Dietary profile and goals you enter (e.g. diet type, allergies, calorie target)", "to": "openai", "why": "Tailor recipes and meal plans to you", "user_content": true },
+    { "what": "Food photos you choose to scan", "to": "openai", "why": "Estimate calories and nutrition", "user_content": true },
+    { "what": "Text read from a receipt you scan (the photo itself is read on your device and not uploaded)", "to": "openai", "why": "Add grocery items to your pantry", "user_content": true },
+    { "what": "A text description of a recipe", "to": "magichour", "why": "Create the recipe's picture", "user_content": true },
+    { "what": "Voice audio while you use voice input", "to": "apple_speech", "why": "Convert speech to text" },
+    { "what": "Usage events, device model, OS version, app identifiers", "to": "firebase", "why": "Understand usage and improve the app" },
+    { "what": "Crash and performance reports", "to": "firebase", "why": "Find and fix bugs" }
+  ],
+
+  "stored_on_device": [
+    "Pantry items, saved recipes, meal plans, grocery lists and cooking history.",
+    "Your profile and dietary preferences.",
+    "Cached AI responses and recipe images, which you can clear in **Settings → Clear Specific Data**."
+  ],
+
+  "not_collected": [
+    "Your name, email address or any account — the app has no sign-in.",
+    "Your advertising identifier (IDFA), location, contacts or browsing history.",
+    "Your Apple Health data (see section 4)."
+  ],
+
+  "permissions": [
+    { "name": "Camera", "why": "to scan receipts and food photos. Receipts are read on your device; food photos are sent to OpenAI only if you have agreed to AI data sharing." },
+    { "name": "Microphone and Speech Recognition", "why": "for voice ingredient input and hands-free cook mode. Audio is converted to text by Apple's speech service." },
+    { "name": "Reminders", "why": "to add your weekly grocery list to the Reminders app. The app only writes that list and does not send your reminders anywhere." },
+    { "name": "Apple Health", "why": "to personalise nutrition targets and log the calories you record (see section 4)." }
+  ],
+
+  "health": {
+    "read": ["body weight", "active energy burned", "workouts"],
+    "read_why": "used on your device to personalise nutrition targets, show progress and decide when to offer a post-workout meal idea.",
+    "write": ["dietary energy (calories you log)"],
+    "write_why": "saved to Apple Health with your permission.",
+    "never_shared": true
+  },
+
+  "your_controls": [
+    "**Withdraw AI consent** in *Settings → Chef AI → Share data with AI*. After that, nothing more is sent to OpenAI or Magic Hour until you agree again.",
+    "**Revoke Apple Health, Camera, Microphone or Reminders access** in iOS Settings.",
+    "**Delete your data** in *Settings → Clear Specific Data*, or by deleting the app."
+  ],
+
+  "subscription": {
+    "restore_location": "on the Premium screen, or in Settings → Subscription"
+  },
+
+  "support_faq": [
+    { "q": "The AI feature asks me to agree before it works. Why?", "a": "AI features send what you type, say or scan to OpenAI (and a recipe description to Magic Hour). We ask first so you know exactly what is shared. You can change your mind in **Settings → Chef AI**." },
+    { "q": "A recipe or calorie estimate looks wrong.", "a": "Recipes and nutrition are generated by AI and can be inaccurate. Always check ingredients, allergens and quantities before cooking or relying on the numbers." },
+    { "q": "Apple Health numbers are not showing.", "a": "Open iOS **Settings → Privacy & Security → Health → Chef** and turn on the categories you want to share." },
+    { "q": "How do I delete my data?", "a": "Use **Settings → Clear Specific Data** in the app, or delete the app. Your data lives on your device, so this removes it completely." }
+  ]
+}
