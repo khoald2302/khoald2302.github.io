@@ -1,0 +1,79 @@
+{
+  "slug": "packshot",
+  "name": "Packshot",
+  "device_name": "Packshot",
+  "tagline": "Turn a phone photo of your product into a clean, marketplace-ready product shot.",
+  "app_store_id": "6815701020",
+  "contact_email": "support@draco-global.com",
+  "last_updated": "2026-09-27",
+
+  "ads": false,
+  "tracking": false,
+  "storage_summary": "Your photos, results and history are stored only on your device. Your credit balance is also backed up to your own iCloud account so purchased credits are not lost.",
+
+  "ai_consent": {
+    "screen_name": "Before we send your photo",
+    "withdraw": "Settings → Legal & Privacy → Send Photos to AI → Turn Off"
+  },
+
+  "processors": {
+    "magic_hour": {
+      "name": "Magic Hour AI, Inc.",
+      "purpose": "Creates the AI scene (the new background) around your product when you use AI Scenes.",
+      "data": "the cut-out image of your product (the original photo and its background never leave your device) and the text description of the scene you picked",
+      "policy_url": "https://magichour.ai/privacy-policy",
+      "requires_consent": true
+    },
+    "firebase": {
+      "name": "Google Firebase (Remote Config)",
+      "purpose": "Delivers app configuration needed to run AI Scenes. Never used for analytics, advertising or cross-app tracking.",
+      "data": "an app-instance identifier, app version, device model, OS version and locale that Firebase needs to deliver the configuration",
+      "policy_url": "https://firebase.google.com/support/privacy"
+    },
+    "apple_icloud": {
+      "name": "Apple (iCloud Key-Value Storage)",
+      "purpose": "Keeps a backup of your credit balance in your own iCloud account so purchased credits come back when you reinstall or change device.",
+      "data": "your credit balance and credit purchase/usage records — no photos",
+      "policy_url": "https://www.apple.com/legal/privacy/"
+    }
+  },
+
+  "data_sent": [
+    { "what": "The cut-out image of your product and the scene description you chose", "to": "magic_hour", "why": "Generate the AI scene you asked for", "user_content": true },
+    { "what": "App-instance identifier, app version, device model, OS version, locale", "to": "firebase", "why": "Deliver app configuration" },
+    { "what": "Credit balance and credit purchase/usage records", "to": "apple_icloud", "why": "Back up your credits in your own iCloud account" }
+  ],
+
+  "stored_on_device": [
+    "The photos you import, the cut-outs, white-background shots and AI scenes you create, and your history.",
+    "Captions and listing text — these are written on your device by Apple's on-device model and never leave it.",
+    "Your credit wallet, your AI-consent choice and your app settings.",
+    "Background removal, white backgrounds and label reading all run on your device.",
+    "Delete everything at any time with **Settings → Delete All Data**."
+  ],
+
+  "not_collected": [
+    "Your name, email address or any account — the app has no sign-in.",
+    "Your original photos — only the cut-out product image is sent, and only for AI Scenes after you agree.",
+    "Your advertising identifier (IDFA), location, contacts or browsing history.",
+    "Analytics or crash reports — the app does not include an analytics SDK."
+  ],
+
+  "permissions": [
+    { "name": "Camera", "why": "to shoot a product photo inside the app. The photo stays on your device." },
+    { "name": "Photos (add only)", "why": "to save your finished product shots to your photo library. Packshot cannot read your library; photos you import are picked by you with the system photo picker." }
+  ],
+
+  "your_controls": [
+    "**Withdraw AI consent** in *Settings → Legal & Privacy → Send Photos to AI → Turn Off*. Background removal and white backgrounds keep working.",
+    "**Revoke Camera or Photos access** in iOS Settings.",
+    "**Delete your data** in *Settings → Delete All Data*, or by deleting the app. Your credits are not affected."
+  ],
+
+  "support_faq": [
+    { "q": "Why does Packshot ask me to agree before creating an AI scene?", "a": "AI Scenes send the cut-out image of your product to Magic Hour AI to generate the new background. We ask first so you know exactly what is shared. If you tap **No, thanks**, nothing is sent, and background removal and white backgrounds keep working." },
+    { "q": "I reinstalled the app. Where are my credits?", "a": "Credit packs are one-time purchases, so the App Store cannot restore them. Your credits come back through iCloud when you use the same Apple Account with iCloud turned on. Tap **Restore Purchases** in Settings to sync. If they still don't appear, email us with your Apple purchase receipt." },
+    { "q": "An AI scene failed. Did I lose credits?", "a": "No. Credits are held while a scene is being generated and are only charged when you receive a result. If the generation fails, the held credits are released back to your wallet." },
+    { "q": "How do I delete my data?", "a": "Use **Settings → Delete All Data** in the app, or delete the app. Your photos and history live only on your device, so this removes them completely." }
+  ]
+}
