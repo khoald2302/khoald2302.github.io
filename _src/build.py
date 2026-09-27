@@ -267,8 +267,12 @@ def privacy(app):
         note = " Shared only with your in-app consent." if p.get("requires_consent") else ""
         plist.append(f"**{p['name']}** — {p['purpose']} Receives: {p['data']}.{note} Their privacy policy: [{p['policy_url'].split('//')[1].rstrip('/')}]({p['policy_url']})")
     plist.append("**Legal requirements** — we may disclose information if required by law, or as part of a merger, acquisition or sale of assets.")
+    # Với app có tracking, "không chia sẻ với nhà quảng cáo" mâu thuẫn với mục Tracking
+    # và với khai báo Third-Party Advertising trên App Store Connect.
+    share_intro = ("We do not sell your personal information." if app["tracking"]
+                   else "We do not sell your personal information and do not share it with advertisers.")
     sections.append(f"""<h2>{n}. Who we share data with</h2>
-<p>We do not sell your personal information and do not share it with advertisers. We share data only with these service providers, each of which is bound by its own privacy policy and data-protection terms:</p>
+<p>{share_intro} We share data only with these service providers, each of which is bound by its own privacy policy and data-protection terms:</p>
 {ul(plist)}""")
     n += 1
 
