@@ -5,18 +5,14 @@
   "tagline": "Turn a messy brain dump into small, doable steps.",
   "app_store_id": "6763340386",
   "contact_email": "khoald2302.ai@gmail.com",
-  "last_updated": "2026-09-27",
-
+  "last_updated": "2026-09-29",
   "ads": false,
-  "tracking": true,
-  "tracking_detail": "Clarity shows no ads. The first time you open the app, iOS asks whether Clarity may track you. If you tap **Allow**, Google Firebase Analytics may read your device's advertising identifier (IDFA) and link your in-app usage, purchase and diagnostic events with data from other companies, so we can measure how well our advertising brings in new users. If you tap **Ask App Not to Track**, the IDFA is not read and your data is not used to track you across other companies' apps and websites. You can change your choice at any time in iOS **Settings → Privacy & Security → Tracking**.",
+  "tracking": false,
   "storage_summary": "Your tasks, Brain Dumps and settings are stored only on your device.",
-
   "ai_consent": {
     "screen_name": "AI features use OpenAI",
     "withdraw": "Delete the app — the choice is stored only on the device, and nothing is sent to OpenAI after reinstalling until the user agrees again."
   },
-
   "processors": {
     "openai": {
       "name": "OpenAI",
@@ -33,22 +29,46 @@
     },
     "firebase": {
       "name": "Google Firebase (Analytics, Crashlytics, Remote Config)",
-      "purpose": "Tells us which features are used, reports crashes, delivers app configuration, and — only if you allow tracking — measures our advertising.",
-      "data": "in-app usage and purchase events, device model, OS version, app-generated identifiers and crash logs, plus your advertising identifier (IDFA) only if you allow tracking",
+      "purpose": "Tells us which features are used, reports crashes, and delivers app configuration. Never used for advertising or cross-app tracking.",
+      "data": "in-app usage and purchase events, device model, OS version, app-generated identifiers and crash logs",
       "policy_url": "https://firebase.google.com/support/privacy"
     }
   },
-
   "data_sent": [
-    { "what": "Tasks and text you type into AI features (task breakdown, time estimates, summaries, rewrites, tone checks)", "to": "openai", "why": "Generate the result you asked for", "user_content": true },
-    { "what": "Text transcribed from your voice Brain Dumps", "to": "openai", "why": "Turn your Brain Dump into a task list", "user_content": true },
-    { "what": "Text you share to Clarity from other apps with the Share sheet", "to": "openai", "why": "Summarise it", "user_content": true },
-    { "what": "Voice audio while you record a Brain Dump", "to": "apple_speech", "why": "Convert speech to text" },
-    { "what": "Usage and purchase events, device model, OS version, app identifiers", "to": "firebase", "why": "Understand usage and improve the app" },
-    { "what": "Crash and performance reports", "to": "firebase", "why": "Find and fix bugs" },
-    { "what": "Advertising identifier (IDFA) — only if you tap **Allow** on the tracking prompt", "to": "firebase", "why": "Measure our advertising" }
+    {
+      "what": "Tasks and text you type into AI features (task breakdown, time estimates, summaries, rewrites, tone checks)",
+      "to": "openai",
+      "why": "Generate the result you asked for",
+      "user_content": true
+    },
+    {
+      "what": "Text transcribed from your voice Brain Dumps",
+      "to": "openai",
+      "why": "Turn your Brain Dump into a task list",
+      "user_content": true
+    },
+    {
+      "what": "Text you share to Clarity from other apps with the Share sheet",
+      "to": "openai",
+      "why": "Summarise it",
+      "user_content": true
+    },
+    {
+      "what": "Voice audio while you record a Brain Dump",
+      "to": "apple_speech",
+      "why": "Convert speech to text"
+    },
+    {
+      "what": "Usage and purchase events, device model, OS version, app identifiers",
+      "to": "firebase",
+      "why": "Understand usage and improve the app"
+    },
+    {
+      "what": "Crash and performance reports",
+      "to": "firebase",
+      "why": "Find and fix bugs"
+    }
   ],
-
   "stored_on_device": [
     "Your tasks, their steps and your time-estimate history.",
     "Focus Mode progress and your app settings.",
@@ -56,33 +76,45 @@
     "Your AI-consent choice and your free AI-run count.",
     "Delete your tasks and history at any time with **Settings → Clear All Data**."
   ],
-
   "not_collected": [
     "Your name, email address or any account — the app has no sign-in.",
     "Your voice recordings — audio is turned into text and is not saved by the app.",
-    "Your precise location, contacts, photos or browsing history."
+    "Your advertising identifier (IDFA), precise location, contacts, photos or browsing history."
   ],
-
   "permissions": [
-    { "name": "Microphone and Speech Recognition", "why": "for voice Brain Dumps. Your voice is converted to text by Apple's speech recognition service; the text is sent to OpenAI only if you have agreed to AI data processing." }
+    {
+      "name": "Microphone and Speech Recognition",
+      "why": "for voice Brain Dumps. Your voice is converted to text by Apple's speech recognition service; the text is sent to OpenAI only if you have agreed to AI data processing."
+    }
   ],
-
   "your_controls": [
     "**Withdraw AI consent** by deleting the app. The choice is stored only on your device, and after you reinstall nothing is sent to OpenAI until you agree again.",
-    "**Stop tracking** at any time in iOS **Settings → Privacy & Security → Tracking**.",
     "**Revoke Microphone or Speech Recognition access** in iOS Settings.",
     "**Delete your tasks and history** in **Settings → Clear All Data**, or by deleting the app."
   ],
-
   "subscription": {
     "restore_location": "on the Premium screen, or in Settings → Restore Purchases"
   },
-
   "support_faq": [
-    { "q": "The AI feature asks me to agree before it works. Why?", "a": "AI features send the text you type, dictate or share to OpenAI. We ask first so you know exactly what is shared. If you tap **Not Now**, nothing is sent and the AI feature does not run." },
-    { "q": "Voice Brain Dump is not transcribing.", "a": "Open iOS **Settings → Clarity AI** and turn on **Microphone** and **Speech Recognition**. Transcription is done by Apple's speech recognition service." },
-    { "q": "Summarising from another app says to open Clarity first.", "a": "Open Clarity once while you are online and agree to AI data processing. The Share sheet uses the same choice." },
-    { "q": "How many AI runs are free?", "a": "You can try every AI tool for free with a limited number of runs. Clarity Premium unlocks unlimited AI for every tool." },
-    { "q": "How do I delete my data?", "a": "Use **Settings → Clear All Data** in the app, or delete the app. Your tasks live on your device, so this removes them completely." }
+    {
+      "q": "The AI feature asks me to agree before it works. Why?",
+      "a": "AI features send the text you type, dictate or share to OpenAI. We ask first so you know exactly what is shared. If you tap **Not Now**, nothing is sent and the AI feature does not run."
+    },
+    {
+      "q": "Voice Brain Dump is not transcribing.",
+      "a": "Open iOS **Settings → Clarity AI** and turn on **Microphone** and **Speech Recognition**. Transcription is done by Apple's speech recognition service."
+    },
+    {
+      "q": "Summarising from another app says to open Clarity first.",
+      "a": "Open Clarity once while you are online and agree to AI data processing. The Share sheet uses the same choice."
+    },
+    {
+      "q": "How many AI runs are free?",
+      "a": "You can try every AI tool for free with a limited number of runs. Clarity Premium unlocks unlimited AI for every tool."
+    },
+    {
+      "q": "How do I delete my data?",
+      "a": "Use **Settings → Clear All Data** in the app, or delete the app. Your tasks live on your device, so this removes them completely."
+    }
   ]
 }
