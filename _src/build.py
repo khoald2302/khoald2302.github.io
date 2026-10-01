@@ -277,12 +277,25 @@ def privacy(app):
     n += 1
 
     # retention
+    # App không có AI thì không được nhắc "AI providers"; app có quảng cáo phải nói đối tác
+    # quảng cáo giữ dữ liệu theo chính sách của họ. App có AI giữ nguyên câu cũ từng chữ.
+    keep = "Data stored on your device stays there until you delete it or uninstall the app. We do not run our own servers and keep no copy of the content you submit."
+    if consent:
+        keep += " AI providers process requests to return a result to you and retain request data only as described in their own policies."
+    if app["ads"]:
+        keep += " Advertising partners retain ad data only as described in their own policies."
+    keep += " Analytics and crash data are kept for the provider's standard retention period."
     sections.append(f"""<h2>{n}. How long we keep it</h2>
-<p>Data stored on your device stays there until you delete it or uninstall the app. We do not run our own servers and keep no copy of the content you submit. AI providers process requests to return a result to you and retain request data only as described in their own policies. Analytics and crash data are kept for the provider's standard retention period.</p>""")
+<p>{keep}</p>""")
     n += 1
 
     # legal bases
-    basis = "For AI features" + (" and Apple Health" if health else "") + " we rely on your <strong>consent</strong>, which you can withdraw at any time."
+    bases = []
+    if consent or health:
+        bases.append(("For AI features" if consent else "For Apple Health") + (" and Apple Health" if consent and health else "") + " we rely on your <strong>consent</strong>, which you can withdraw at any time.")
+    if app["ads"]:
+        bases.append("For personalised ads we rely on your <strong>consent</strong> (the App Tracking Transparency prompt and, where the law requires it, the ad consent form); you can withdraw it at any time. Non-personalised ads rely on our legitimate interest in keeping the app free.")
+    basis = " ".join(bases)
     sections.append(f"""<h2>{n}. Legal bases</h2>
 <p>{basis} For analytics and crash diagnostics we rely on our legitimate interest in keeping the app working and improving it. For purchases, we rely on performing our contract with you.</p>""")
     n += 1
