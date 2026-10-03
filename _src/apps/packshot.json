@@ -5,17 +5,15 @@
   "tagline": "Turn a phone photo of your product into a clean, marketplace-ready product shot.",
   "app_store_id": "6815701020",
   "contact_email": "khoald2302.ai@gmail.com",
-  "last_updated": "2026-09-27",
-
+  "last_updated": "2026-10-03",
   "ads": false,
   "tracking": false,
   "storage_summary": "Your photos, results and history are stored only on your device. Your credit balance is also backed up to your own iCloud account so purchased credits are not lost.",
-
   "ai_consent": {
     "screen_name": "Before we send your photo",
-    "withdraw": "Settings → Legal & Privacy → Send Photos to AI → Turn Off"
+    "withdraw": "Settings → Legal & Privacy → Send Photos to AI → Turn Off",
+    "decline_label": "No, thanks"
   },
-
   "processors": {
     "magic_hour": {
       "name": "Magic Hour AI, Inc.",
@@ -26,9 +24,21 @@
     },
     "firebase": {
       "name": "Google Firebase (Remote Config)",
-      "purpose": "Delivers app configuration needed to run AI Scenes. Never used for analytics, advertising or cross-app tracking.",
+      "purpose": "Delivers app configuration needed to run AI Scenes. Not used for advertising or cross-app tracking.",
       "data": "an app-instance identifier, app version, device model, OS version and locale that Firebase needs to deliver the configuration",
       "policy_url": "https://firebase.google.com/support/privacy"
+    },
+    "google_analytics": {
+      "name": "Google Analytics for Firebase",
+      "purpose": "Measures how the app is used (for example which features are opened, whether a photo was saved, whether a purchase completed) so we can fix problems and improve Packshot. Not used for advertising or cross-app tracking. You can turn it off at any time in Settings → Legal & Privacy → Share Usage Data.",
+      "data": "usage events and their settings (never your photos and never text you type), an app-instance identifier, app version, device model, OS version, locale, approximate region derived from your IP address, purchase events (product and result), and — if you installed from an Apple Ads campaign — the campaign of that install",
+      "policy_url": "https://firebase.google.com/support/privacy"
+    },
+    "apple_ads": {
+      "name": "Apple (AdServices and AdAttributionKit)",
+      "purpose": "Measures whether our ads work without tracking you. Apple tells us, once per install, whether the install came from an Apple Ads campaign. For installs from other ad networks, iOS itself sends the ad network an anonymous, aggregated conversion value (for example: onboarding finished, first photo saved, purchase) — the app never sees or shares who you are.",
+      "data": "an anonymous attribution token created by iOS (no advertising identifier), and a coarse conversion value that iOS sends on the app's behalf",
+      "policy_url": "https://www.apple.com/legal/privacy/"
     },
     "apple_icloud": {
       "name": "Apple (iCloud Key-Value Storage)",
@@ -37,13 +47,34 @@
       "policy_url": "https://www.apple.com/legal/privacy/"
     }
   },
-
   "data_sent": [
-    { "what": "The cut-out image of your product and the scene description you chose", "to": "magic_hour", "why": "Generate the AI scene you asked for", "user_content": true },
-    { "what": "App-instance identifier, app version, device model, OS version, locale", "to": "firebase", "why": "Deliver app configuration" },
-    { "what": "Credit balance and credit purchase/usage records", "to": "apple_icloud", "why": "Back up your credits in your own iCloud account" }
+    {
+      "what": "The cut-out image of your product and the scene description you chose",
+      "to": "magic_hour",
+      "why": "Generate the AI scene you asked for",
+      "user_content": true
+    },
+    {
+      "what": "App-instance identifier, app version, device model, OS version, locale",
+      "to": "firebase",
+      "why": "Deliver app configuration"
+    },
+    {
+      "what": "Usage events (no photos, no typed text), app-instance identifier, app and device info, approximate region, purchase events",
+      "to": "google_analytics",
+      "why": "Understand how the app is used and improve it — only while **Share Usage Data** is on"
+    },
+    {
+      "what": "Anonymous attribution token and a coarse conversion value — no advertising identifier",
+      "to": "apple_ads",
+      "why": "Measure whether an ad led to the install — only while **Share Usage Data** is on"
+    },
+    {
+      "what": "Credit balance and credit purchase/usage records",
+      "to": "apple_icloud",
+      "why": "Back up your credits in your own iCloud account"
+    }
   ],
-
   "stored_on_device": [
     "The photos you import, the cut-outs, white-background shots and AI scenes you create, and your history.",
     "Captions and listing text — these are written on your device by Apple's on-device model and never leave it.",
@@ -51,29 +82,44 @@
     "Background removal, white backgrounds and label reading all run on your device.",
     "Delete everything at any time with **Settings → Delete All Data**."
   ],
-
   "not_collected": [
     "Your name, email address or any account — the app has no sign-in.",
     "Your original photos — only the cut-out product image is sent, and only for AI Scenes after you agree.",
-    "Your advertising identifier (IDFA), location, contacts or browsing history.",
-    "Analytics or crash reports — the app does not include an analytics SDK."
+    "Your advertising identifier (IDFA), precise location, contacts or browsing history.",
+    "Crash reports — the app does not include a crash-reporting SDK."
   ],
-
   "permissions": [
-    { "name": "Camera", "why": "to shoot a product photo inside the app. The photo stays on your device." },
-    { "name": "Photos (add only)", "why": "to save your finished product shots to your photo library. Packshot cannot read your library; photos you import are picked by you with the system photo picker." }
+    {
+      "name": "Camera",
+      "why": "to shoot a product photo inside the app. The photo stays on your device."
+    },
+    {
+      "name": "Photos (add only)",
+      "why": "to save your finished product shots to your photo library. Packshot cannot read your library; photos you import are picked by you with the system photo picker."
+    }
   ],
-
   "your_controls": [
-    "**Withdraw AI consent** in *Settings → Legal & Privacy → Send Photos to AI → Turn Off*. Background removal and white backgrounds keep working.",
+    "**Withdraw AI consent** in Settings → Legal & Privacy → Send Photos to AI → Turn Off. Background removal and white backgrounds keep working.",
+    "**Turn off usage analytics and ad measurement** in Settings → Legal & Privacy → Share Usage Data. Nothing else in the app changes.",
     "**Revoke Camera or Photos access** in iOS Settings.",
-    "**Delete your data** in *Settings → Delete All Data*, or by deleting the app. Your credits are not affected."
+    "**Delete your data** in Settings → Delete All Data, or by deleting the app. Your credits are not affected."
   ],
-
   "support_faq": [
-    { "q": "Why does Packshot ask me to agree before creating an AI scene?", "a": "AI Scenes send the cut-out image of your product to Magic Hour AI to generate the new background. We ask first so you know exactly what is shared. If you tap **No, thanks**, nothing is sent, and background removal and white backgrounds keep working." },
-    { "q": "I reinstalled the app. Where are my credits?", "a": "Credit packs are one-time purchases, so the App Store cannot restore them. Your credits come back through iCloud when you use the same Apple Account with iCloud turned on. Tap **Restore Purchases** in Settings to sync. If they still don't appear, email us with your Apple purchase receipt." },
-    { "q": "An AI scene failed. Did I lose credits?", "a": "No. Credits are held while a scene is being generated and are only charged when you receive a result. If the generation fails, the held credits are released back to your wallet." },
-    { "q": "How do I delete my data?", "a": "Use **Settings → Delete All Data** in the app, or delete the app. Your photos and history live only on your device, so this removes them completely." }
+    {
+      "q": "Why does Packshot ask me to agree before creating an AI scene?",
+      "a": "AI Scenes send the cut-out image of your product to Magic Hour AI to generate the new background. We ask first so you know exactly what is shared. If you tap **No, thanks**, nothing is sent, and background removal and white backgrounds keep working."
+    },
+    {
+      "q": "I reinstalled the app. Where are my credits?",
+      "a": "Credit packs are one-time purchases, so the App Store cannot restore them. Your credits come back through iCloud when you use the same Apple Account with iCloud turned on. Tap **Restore Purchases** in Settings to sync. If they still don't appear, email us with your Apple purchase receipt."
+    },
+    {
+      "q": "An AI scene failed. Did I lose credits?",
+      "a": "No. Credits are held while a scene is being generated and are only charged when you receive a result. If the generation fails, the held credits are released back to your wallet."
+    },
+    {
+      "q": "How do I delete my data?",
+      "a": "Use **Settings → Delete All Data** in the app, or delete the app. Your photos and history live only on your device, so this removes them completely."
+    }
   ]
 }

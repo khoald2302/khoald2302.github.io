@@ -43,7 +43,7 @@
 <body>
 <main>
   <h1>Privacy Policy</h1>
-  <p class="sub">Packshot · Last updated September 27, 2026</p>
+  <p class="sub">Packshot · Last updated October 3, 2026</p>
   <p>This policy explains what information <strong>Packshot</strong> (“the app”, “we”) collects, why, and who it is shared with. It is written to match exactly what the app does.</p>
 <h2>Summary</h2>
 <div class="box"><ul>
@@ -54,10 +54,12 @@
 </ul></div>
 
 <h2>1. What leaves your device</h2>
-<p>The table below lists everything that leaves your device.</p><p>Items sent to an AI provider are sent <strong>only after you agree</strong> on the in-app “Before we send your photo” screen. If you tap “Not now”, nothing is sent and the AI feature does not run.</p>
+<p>The table below lists everything that leaves your device.</p><p>Items sent to an AI provider are sent <strong>only after you agree</strong> on the in-app “Before we send your photo” screen. If you tap “No, thanks”, nothing is sent and the AI feature does not run.</p>
 <table><thead><tr><th>Data</th><th>Sent to</th><th>Why</th></tr></thead><tbody>
 <tr><td>The cut-out image of your product and the scene description you chose</td><td>Magic Hour AI, Inc.</td><td>Generate the AI scene you asked for</td></tr>
 <tr><td>App-instance identifier, app version, device model, OS version, locale</td><td>Google Firebase (Remote Config)</td><td>Deliver app configuration</td></tr>
+<tr><td>Usage events (no photos, no typed text), app-instance identifier, app and device info, approximate region, purchase events</td><td>Google Analytics for Firebase</td><td>Understand how the app is used and improve it — only while <strong>Share Usage Data</strong> is on</td></tr>
+<tr><td>Anonymous attribution token and a coarse conversion value — no advertising identifier</td><td>Apple (AdServices and AdAttributionKit)</td><td>Measure whether an ad led to the install — only while <strong>Share Usage Data</strong> is on</td></tr>
 <tr><td>Credit balance and credit purchase/usage records</td><td>Apple (iCloud Key-Value Storage)</td><td>Back up your credits in your own iCloud account</td></tr>
 </tbody></table>
 
@@ -73,8 +75,8 @@
 <ul>
   <li>Your name, email address or any account — the app has no sign-in.</li>
   <li>Your original photos — only the cut-out product image is sent, and only for AI Scenes after you agree.</li>
-  <li>Your advertising identifier (IDFA), location, contacts or browsing history.</li>
-  <li>Analytics or crash reports — the app does not include an analytics SDK.</li>
+  <li>Your advertising identifier (IDFA), precise location, contacts or browsing history.</li>
+  <li>Crash reports — the app does not include a crash-reporting SDK.</li>
 </ul>
 
 <h2>3. Device permissions</h2>
@@ -88,7 +90,9 @@
 <p>We do not sell your personal information and do not share it with advertisers. We share data only with these service providers, each of which is bound by its own privacy policy and data-protection terms:</p>
 <ul>
   <li><strong>Magic Hour AI, Inc.</strong> — Creates the AI scene (the new background) around your product when you use AI Scenes. Receives: the cut-out image of your product (the original photo and its background never leave your device) and the text description of the scene you picked. Shared only with your in-app consent. Their privacy policy: <a href="https://magichour.ai/privacy-policy" rel="noopener">magichour.ai/privacy-policy</a></li>
-  <li><strong>Google Firebase (Remote Config)</strong> — Delivers app configuration needed to run AI Scenes. Never used for analytics, advertising or cross-app tracking. Receives: an app-instance identifier, app version, device model, OS version and locale that Firebase needs to deliver the configuration. Their privacy policy: <a href="https://firebase.google.com/support/privacy" rel="noopener">firebase.google.com/support/privacy</a></li>
+  <li><strong>Google Firebase (Remote Config)</strong> — Delivers app configuration needed to run AI Scenes. Not used for advertising or cross-app tracking. Receives: an app-instance identifier, app version, device model, OS version and locale that Firebase needs to deliver the configuration. Their privacy policy: <a href="https://firebase.google.com/support/privacy" rel="noopener">firebase.google.com/support/privacy</a></li>
+  <li><strong>Google Analytics for Firebase</strong> — Measures how the app is used (for example which features are opened, whether a photo was saved, whether a purchase completed) so we can fix problems and improve Packshot. Not used for advertising or cross-app tracking. You can turn it off at any time in Settings → Legal &amp; Privacy → Share Usage Data. Receives: usage events and their settings (never your photos and never text you type), an app-instance identifier, app version, device model, OS version, locale, approximate region derived from your IP address, purchase events (product and result), and — if you installed from an Apple Ads campaign — the campaign of that install. Their privacy policy: <a href="https://firebase.google.com/support/privacy" rel="noopener">firebase.google.com/support/privacy</a></li>
+  <li><strong>Apple (AdServices and AdAttributionKit)</strong> — Measures whether our ads work without tracking you. Apple tells us, once per install, whether the install came from an Apple Ads campaign. For installs from other ad networks, iOS itself sends the ad network an anonymous, aggregated conversion value (for example: onboarding finished, first photo saved, purchase) — the app never sees or shares who you are. Receives: an anonymous attribution token created by iOS (no advertising identifier), and a coarse conversion value that iOS sends on the app&#x27;s behalf. Their privacy policy: <a href="https://www.apple.com/legal/privacy/" rel="noopener">www.apple.com/legal/privacy</a></li>
   <li><strong>Apple (iCloud Key-Value Storage)</strong> — Keeps a backup of your credit balance in your own iCloud account so purchased credits come back when you reinstall or change device. Receives: your credit balance and credit purchase/usage records — no photos. Their privacy policy: <a href="https://www.apple.com/legal/privacy/" rel="noopener">www.apple.com/legal/privacy</a></li>
   <li><strong>Legal requirements</strong> — we may disclose information if required by law, or as part of a merger, acquisition or sale of assets.</li>
 </ul>
@@ -102,9 +106,10 @@
 <h2>7. Your choices and rights</h2>
 <p>Depending on where you live (for example under the GDPR or the CCPA), you may have the right to access, correct, delete or restrict the processing of your personal information. In the app you can:</p>
 <ul>
-  <li><strong>Withdraw AI consent</strong> in *Settings → Legal &amp; Privacy → Send Photos to AI → Turn Off*. Background removal and white backgrounds keep working.</li>
+  <li><strong>Withdraw AI consent</strong> in Settings → Legal &amp; Privacy → Send Photos to AI → Turn Off. Background removal and white backgrounds keep working.</li>
+  <li><strong>Turn off usage analytics and ad measurement</strong> in Settings → Legal &amp; Privacy → Share Usage Data. Nothing else in the app changes.</li>
   <li><strong>Revoke Camera or Photos access</strong> in iOS Settings.</li>
-  <li><strong>Delete your data</strong> in *Settings → Delete All Data*, or by deleting the app. Your credits are not affected.</li>
+  <li><strong>Delete your data</strong> in Settings → Delete All Data, or by deleting the app. Your credits are not affected.</li>
 </ul>
 <p>For any other request, email <a href="mailto:khoald2302.ai@gmail.com">khoald2302.ai@gmail.com</a>. We will respond within 30 days.</p>
 

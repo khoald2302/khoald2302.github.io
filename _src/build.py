@@ -227,7 +227,7 @@ def privacy(app):
         for d in app["data_sent"])
     txt = "<p>The table below lists everything that leaves your device.</p>"
     if consent:
-        txt += f"<p>Items sent to an AI provider are sent <strong>only after you agree</strong> on the in-app “{e(consent['screen_name'])}” screen. If you tap “Not now”, nothing is sent and the AI feature does not run.</p>"
+        txt += f"<p>Items sent to an AI provider are sent <strong>only after you agree</strong> on the in-app “{e(consent['screen_name'])}” screen. If you tap “{e(consent.get('decline_label', 'Not now'))}”, nothing is sent and the AI feature does not run.</p>"
     sections.append(f"""<h2>1. What leaves your device</h2>
 {txt}
 <table><thead><tr><th>Data</th><th>Sent to</th><th>Why</th></tr></thead><tbody>
