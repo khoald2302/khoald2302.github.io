@@ -1,0 +1,76 @@
+{
+  "slug": "qr-scanner",
+  "name": "QR Code Scanner: Barcode",
+  "device_name": "QR Hub",
+  "tagline": "Scan and create QR codes and barcodes — your history stays on your iPhone.",
+  "app_store_id": "6757671285",
+  "contact_email": "khoald2302.ai@gmail.com",
+  "last_updated": "2026-10-04",
+  "ads": false,
+  "tracking": true,
+  "tracking_detail": "The app asks for permission through Apple's App Tracking Transparency prompt on first launch. The app shows no advertising and does not share your data with advertisers or data brokers. It uses Google Firebase Analytics only to measure how the app is used (for example screens opened, scans and purchase events) so we can improve it, and it is built without the advertising-identifier (IDFA) component. Whether you choose **Allow** or **Ask App Not to Track**, every feature keeps working. You can change your choice at any time in iOS Settings → Privacy & Security → Tracking.",
+  "storage_summary": "The codes you scan and create, and your history, are stored only on your device. Scanning and creating run on your device; the content of your codes is never uploaded.",
+  "processors": {
+    "firebase": {
+      "name": "Google Firebase (Analytics)",
+      "purpose": "Tells us which features are used so we can improve the app. Never used for advertising.",
+      "data": "in-app usage and purchase events, device model, OS version and app-generated identifiers — never the content of the codes you scan or create",
+      "policy_url": "https://firebase.google.com/support/privacy"
+    },
+    "apple_storekit": {
+      "name": "Apple (App Store purchases)",
+      "purpose": "Processes your subscription payment and verifies your purchase receipt.",
+      "data": "your purchase receipt, handled by Apple. We never see your payment details.",
+      "policy_url": "https://www.apple.com/legal/privacy/"
+    }
+  },
+  "data_sent": [
+    {
+      "what": "In-app usage and purchase events (screens opened, scans and creations counted, paywall and purchase events) with an app-generated identifier",
+      "to": "firebase",
+      "why": "Measure how the app is used and improve it"
+    },
+    {
+      "what": "Your purchase receipt",
+      "to": "apple_storekit",
+      "why": "Confirm that your subscription is active"
+    }
+  ],
+  "stored_on_device": [
+    "The QR codes and barcodes you scan or create, their names, colors and your scan and create history — all kept on your device.",
+    "Scanning and creating codes runs on your device. The content of a code is never sent to us.",
+    "If a scanned code contains a link, a Wi-Fi network, a contact, an email, a phone number or a location, the app only acts on it when you tap the action, for example opening the link or saving the contact.",
+    "Your settings and your subscription status are stored on your device.",
+    "Delete items in **History**, or delete the app to remove everything."
+  ],
+  "not_collected": [
+    "Your name, email address or any account — the app has no sign-in.",
+    "The content of the codes you scan or create, or your scan history.",
+    "Your photo library — photos you pick to scan are chosen by you with the system photo picker.",
+    "Your contacts or calendar — they are only written to when you choose to save a contact or an event."
+  ],
+  "permissions": [
+    {"name": "Camera", "why": "to scan QR codes and barcodes. Frames are processed on your device."},
+    {"name": "Photos", "why": "to scan a code from a photo you pick, and to save QR codes and barcodes you create to your library."},
+    {"name": "Location (while using the app)", "why": "only when you create a map QR code, to fill in your current position. It stays on your device."},
+    {"name": "Contacts", "why": "to save a contact from a scanned contact card, only when you tap save."},
+    {"name": "Calendar", "why": "to add an event from a scanned calendar code, only when you tap add."},
+    {"name": "Tracking (App Tracking Transparency)", "why": "to ask whether app usage may be measured across installs. Saying no does not limit any feature."}
+  ],
+  "your_controls": [
+    "**Stop tracking** in iOS Settings → Privacy & Security → Tracking.",
+    "**Revoke Camera, Photos, Location, Contacts or Calendar access** in iOS Settings.",
+    "**Delete your history** in History, or delete the app to remove everything.",
+    "**Cancel your subscription** in iOS Settings → your name → Subscriptions."
+  ],
+  "subscription": {
+    "restore_location": "on the Pro screen (Restore Purchase)"
+  },
+  "support_faq": [
+    {"q": "Are my scanned codes uploaded anywhere?", "a": "No. Scanning and creating run on your device, and your history is stored only on your device. Only anonymous usage events, such as which screen was opened, are sent for analytics."},
+    {"q": "Does the app show ads?", "a": "No. The app has no advertising."},
+    {"q": "Why is there a subscription?", "a": "Scan results and creating codes are part of the Pro subscription: a weekly plan with a 3-day free trial and a yearly plan. Use **Restore Purchase** on the Pro screen if you already subscribed."},
+    {"q": "How do I cancel?", "a": "Open iOS Settings → your name → Subscriptions, choose QR Hub and tap Cancel. Deleting the app does not cancel a subscription."},
+    {"q": "How do I delete my data?", "a": "Delete items in **History**, or delete the app. Your codes live only on your device, so this removes them completely."}
+  ]
+}
