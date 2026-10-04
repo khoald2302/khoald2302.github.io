@@ -1,0 +1,120 @@
+{
+  "slug": "ai-tattoo",
+  "name": "AI Tattoo Generator – Ink Art",
+  "device_name": "AI Tattoo",
+  "tagline": "Design a tattoo from a few words, then try it on your own photo.",
+  "app_store_id": "6748861156",
+  "contact_email": "khoald2302.ai@gmail.com",
+  "last_updated": "2026-10-04",
+  "terms_url": "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/",
+  "ads": false,
+  "tracking": false,
+  "storage_summary": "Your designs, try-on photos and saved library are stored only on your device. Your design-credit balance is also backed up to your own iCloud account so purchased credits are not lost.",
+  "ai_consent": {
+    "screen_name": "Before we create your tattoo",
+    "withdraw": "Settings → AI Data Sharing → Not now",
+    "decline_label": "Not now"
+  },
+  "processors": {
+    "magichour": {
+      "name": "Magic Hour AI, Inc.",
+      "purpose": "Draws the tattoo design you ask for.",
+      "data": "the description you type and the style, body placement and size you pick — never your photos",
+      "policy_url": "https://magichour.ai/privacy-policy",
+      "requires_consent": true
+    },
+    "firebase": {
+      "name": "Google Firebase (Remote Config)",
+      "purpose": "Delivers app configuration needed to create designs. Not used for advertising or cross-app tracking.",
+      "data": "an app-instance identifier, app version, device model, OS version and locale that Firebase needs to deliver the configuration",
+      "policy_url": "https://firebase.google.com/support/privacy"
+    },
+    "google_analytics": {
+      "name": "Google Analytics for Firebase",
+      "purpose": "Measures how the app is used (for example whether onboarding was finished, whether a design was created or a try-on saved, whether a purchase completed) so we can fix problems and improve the app. Not used for advertising or cross-app tracking.",
+      "data": "usage events and their settings (never your photos and never the text you type), an app-instance identifier, app version, device model, OS version, locale, approximate region derived from your IP address, and purchase events (product and result)",
+      "policy_url": "https://firebase.google.com/support/privacy"
+    },
+    "apple_icloud": {
+      "name": "Apple (iCloud Key-Value Storage)",
+      "purpose": "Keeps a backup of your design-credit balance in your own iCloud account so purchased credits come back when you reinstall or change device.",
+      "data": "your credit balance and credit purchase/usage records — no designs and no photos",
+      "policy_url": "https://www.apple.com/legal/privacy/"
+    }
+  },
+  "data_sent": [
+    {
+      "what": "The tattoo description you type, plus the style, body placement and size you pick",
+      "to": "magichour",
+      "why": "Create the tattoo design you asked for",
+      "user_content": true
+    },
+    {
+      "what": "App-instance identifier, app version, device model, OS version, locale",
+      "to": "firebase",
+      "why": "Deliver app configuration"
+    },
+    {
+      "what": "Usage events (no photos, no typed text), app-instance identifier, app and device info, approximate region, purchase events",
+      "to": "google_analytics",
+      "why": "Understand how the app is used and improve it"
+    },
+    {
+      "what": "Credit balance and credit purchase/usage records",
+      "to": "apple_icloud",
+      "why": "Back up your credits in your own iCloud account"
+    }
+  ],
+  "stored_on_device": [
+    "The designs you create, the try-on photos you save and your tattoo library.",
+    "Try On runs entirely on your device with Apple's Vision and Core ML — the photo of your arm, back or chest is never uploaded.",
+    "Your credit wallet, your AI-consent choice and your app settings.",
+    "Delete everything at any time with **Settings → Delete All Data**."
+  ],
+  "not_collected": [
+    "Your name, email address or any account — the app has no sign-in.",
+    "Your photos — Try On never uploads them, and nothing from your photo library is sent anywhere.",
+    "Your advertising identifier (IDFA), precise location, contacts or browsing history.",
+    "Crash reports — the app does not include a crash-reporting SDK."
+  ],
+  "permissions": [
+    {
+      "name": "Camera",
+      "why": "to take a photo inside the app and try a design on it. The photo stays on your device."
+    },
+    {
+      "name": "Photos",
+      "why": "to pick a photo to try a design on, import a design image, and save your results to your library. Photos are used only on your device."
+    }
+  ],
+  "your_controls": [
+    "**Withdraw AI consent** in Settings → AI Data Sharing → Not now. Nothing more is sent to Magic Hour until you agree again; Try On keeps working.",
+    "**Revoke Camera or Photos access** in iOS Settings.",
+    "**Delete your data** in Settings → Delete All Data, or by deleting the app."
+  ],
+  "subscription": {
+    "restore_location": "at the bottom of the Premium screen, or in Settings → Restore Purchases"
+  },
+  "support_faq": [
+    {
+      "q": "Why does the app ask me to agree before creating a design?",
+      "a": "Designs are drawn by Magic Hour AI from the description you type. We ask first so you know exactly what is shared. If you tap **Not now**, nothing is sent and Try On keeps working."
+    },
+    {
+      "q": "A design failed. Did I lose a credit?",
+      "a": "No. A credit is held while the design is being created and is only spent when you receive it. If the generation fails, the credit goes back to your wallet."
+    },
+    {
+      "q": "I reinstalled the app. Where are my credits?",
+      "a": "Credit packs are one-time purchases, so the App Store cannot restore them. They come back through iCloud when you use the same Apple Account with iCloud turned on. If they still don't appear, email us with your Apple purchase receipt."
+    },
+    {
+      "q": "Are my photos uploaded when I use Try On?",
+      "a": "No. Try On runs entirely on your device. Only the text description of a new design is ever sent, and only after you agree."
+    },
+    {
+      "q": "How do I delete my data?",
+      "a": "Use **Settings → Delete All Data** in the app, or delete the app. Your designs and photos live only on your device, so this removes them completely."
+    }
+  ]
+}
