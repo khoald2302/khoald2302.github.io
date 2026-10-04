@@ -1,0 +1,53 @@
+{
+  "slug": "loudly",
+  "name": "Loudly",
+  "device_name": "Loudly",
+  "tagline": "A louder, cleaner player for your own music and videos — offline, bought once, no subscription.",
+  "app_store_id": "",
+  "contact_email": "khoald2302.ai@gmail.com",
+  "last_updated": "2026-10-04",
+  "terms_url": "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/",
+
+  "ads": false,
+  "tracking": false,
+  "analytics": false,
+  "storage_summary": "The music and videos you import, your playlists, favourites and settings are stored only on your iPhone. Loudly works fully offline and never sends your data anywhere.",
+  "nothing_sent_detail": "Your audio is boosted and equalised on your iPhone. Purchases are handled by Apple through the App Store; we never see your payment details.",
+
+  "processors": {},
+  "data_sent": [],
+
+  "stored_on_device": [
+    "The audio and video files you import (from Files, AirDrop or your music library) and your library, playlists and favourites.",
+    "Your boost, equaliser and playback settings, and the results of the Volume Checkup.",
+    "Whether you have unlocked Loudly Plus, checked on your device with Apple's StoreKit.",
+    "Delete everything at any time by deleting the app."
+  ],
+
+  "not_collected": [
+    "Your name, email address or any account, because Loudly has no sign-in.",
+    "What you listen to or watch, because nothing about your library or playback leaves your iPhone.",
+    "Your advertising identifier (IDFA), location, contacts or browsing history.",
+    "Analytics or crash reports, because the app includes no analytics, advertising or crash-reporting SDK and makes no network requests.",
+    "Payment details, because purchases are processed by Apple."
+  ],
+
+  "permissions": [
+    { "name": "Media & Apple Music", "why": "to let you pick songs already in your music library (DRM-free tracks only), only if you choose to import from it. The songs stay on your iPhone." }
+  ],
+
+  "your_controls": [
+    "**Remove any track or video** from your Loudly library in the app; the original file in Files or your music library is not touched.",
+    "**Revoke Media & Apple Music access** in iOS Settings at any time; files you imported from Files keep working.",
+    "**Delete all your data** by deleting the app."
+  ],
+
+  "support_faq": [
+    { "q": "Can Loudly make Spotify, YouTube or Apple Music louder?", "a": "No. iOS does not let any app process another app's audio, so no app can truly do this. Loudly boosts the music and videos you import into Loudly itself, and its **Volume Checkup** shows the iOS settings that may be making your iPhone quieter everywhere." },
+    { "q": "How much louder does it get, and will it distort?", "a": "Loudly applies a real, measured boost with a built-in limiter, so loud passages are held back instead of clipping. The exact boost depends on the track; very loud masters gain less." },
+    { "q": "I bought Loudly Plus. How do I get it on a new iPhone?", "a": "Loudly Plus is a one-time purchase, not a subscription. Open the Loudly Plus screen and tap **Restore Purchases** while signed in with the same Apple Account you used to buy." },
+    { "q": "How do I add my music and videos?", "a": "Import files from the Files app or AirDrop, or pick DRM-free songs from your music library. Streaming-service downloads and protected songs cannot be imported because they are locked to their own apps." },
+    { "q": "How do I get a refund?", "a": "Refunds are handled by Apple. Request one at [reportaproblem.apple.com](https://reportaproblem.apple.com)." },
+    { "q": "How do I delete my data?", "a": "Remove tracks in the app, or delete the app. Your files and settings live only on your iPhone, so deleting the app removes them completely." }
+  ]
+}
