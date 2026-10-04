@@ -172,6 +172,15 @@ CSS = """
 
 def page(title, body, app):
     u = urls(app)
+    # App chưa lên store (app_store_id rỗng) thì bỏ link App Store thay vì để link chết.
+    # terms_url (tuỳ chọn): link Điều khoản, ví dụ EULA chuẩn của Apple.
+    links = [f'<a href="{u["privacy"]}">Privacy Policy</a>', f'<a href="{u["support"]}">Support</a>']
+    if app.get("terms_url"):
+        links.append(f'<a href="{e(app["terms_url"])}">Terms of Use</a>')
+    if app["app_store_id"]:
+        links.append(f'<a href="{u["store"]}">App Store</a>')
+    links.append(f'<a href="{u["home"]}">Developer</a>')
+    footer = "\n".join(f"    {link}" for link in links)
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -185,10 +194,7 @@ def page(title, body, app):
 <main>
 {body}
   <footer>
-    <a href="{u['privacy']}">Privacy Policy</a>
-    <a href="{u['support']}">Support</a>
-    <a href="{u['store']}">App Store</a>
-    <a href="{u['home']}">Developer</a>
+{footer}
   </footer>
 </main>
 </body>
@@ -228,11 +234,16 @@ def privacy(app):
     txt = "<p>The table below lists everything that leaves your device.</p>"
     if consent:
         txt += f"<p>Items sent to an AI provider are sent <strong>only after you agree</strong> on the in-app “{e(consent['screen_name'])}” screen. If you tap “{e(consent.get('decline_label', 'Not now'))}”, nothing is sent and the AI feature does not run.</p>"
-    sections.append(f"""<h2>1. What leaves your device</h2>
+    if app["data_sent"]:
+        sections.append(f"""<h2>1. What leaves your device</h2>
 {txt}
 <table><thead><tr><th>Data</th><th>Sent to</th><th>Why</th></tr></thead><tbody>
 {rows}
 </tbody></table>""")
+    else:
+        # App không gửi gì đi: không vẽ bảng rỗng. nothing_sent_detail nói dữ liệu chỉ rời máy khi người dùng tự chia sẻ.
+        sections.append(f"""<h2>1. What leaves your device</h2>
+<p><strong>Nothing.</strong> The app makes no network requests of its own and sends no data to us or to any third party. {rich(app.get('nothing_sent_detail', ''))}</p>""")
 
     # 2. lưu trên máy + không thu thập
     sections.append(f"""<h2>2. What stays on your device</h2>
@@ -271,9 +282,13 @@ def privacy(app):
     # và với khai báo Third-Party Advertising trên App Store Connect.
     share_intro = ("We do not sell your personal information." if app["tracking"]
                    else "We do not sell your personal information and do not share it with advertisers.")
-    sections.append(f"""<h2>{n}. Who we share data with</h2>
+    if procs:
+        sections.append(f"""<h2>{n}. Who we share data with</h2>
 <p>{share_intro} We share data only with these service providers, each of which is bound by its own privacy policy and data-protection terms:</p>
 {ul(plist)}""")
+    else:
+        sections.append(f"""<h2>{n}. Who we share data with</h2>
+<p>{share_intro} We use no third-party service providers, so there is no one we share your data with. We do not receive your data ourselves either; a file you export or back up goes only where you choose to send it.</p>""")
     n += 1
 
     # retention
@@ -284,7 +299,9 @@ def privacy(app):
         keep += " AI providers process requests to return a result to you and retain request data only as described in their own policies."
     if app["ads"]:
         keep += " Advertising partners retain ad data only as described in their own policies."
-    keep += " Analytics and crash data are kept for the provider's standard retention period."
+    # analytics (tuỳ chọn, mặc định true): app không có SDK analytics/crash thì không nhắc tới.
+    if app.get("analytics", True):
+        keep += " Analytics and crash data are kept for the provider's standard retention period."
     sections.append(f"""<h2>{n}. How long we keep it</h2>
 <p>{keep}</p>""")
     n += 1
@@ -295,9 +312,13 @@ def privacy(app):
         bases.append(("For AI features" if consent else "For Apple Health") + (" and Apple Health" if consent and health else "") + " we rely on your <strong>consent</strong>, which you can withdraw at any time.")
     if app["ads"]:
         bases.append("For personalised ads we rely on your <strong>consent</strong> (the App Tracking Transparency prompt and, where the law requires it, the ad consent form); you can withdraw it at any time. Non-personalised ads rely on our legitimate interest in keeping the app free.")
-    basis = " ".join(bases)
+    purchases = "For purchases, we rely on performing our contract with you."
+    if app.get("analytics", True):
+        basis = " ".join(bases) + " For analytics and crash diagnostics we rely on our legitimate interest in keeping the app working and improving it. " + purchases
+    else:
+        basis = " ".join(bases + [purchases])
     sections.append(f"""<h2>{n}. Legal bases</h2>
-<p>{basis} For analytics and crash diagnostics we rely on our legitimate interest in keeping the app working and improving it. For purchases, we rely on performing our contract with you.</p>""")
+<p>{basis}</p>""")
     n += 1
 
     # rights

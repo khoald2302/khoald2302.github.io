@@ -1,0 +1,55 @@
+{
+  "slug": "hearth",
+  "name": "Hearth: Period Tracker Calendar",
+  "device_name": "Hearth",
+  "tagline": "A private period tracker you buy once — no account, no subscription, and your data stays on your iPhone.",
+  "app_store_id": "",
+  "contact_email": "khoald2302.ai@gmail.com",
+  "last_updated": "2026-10-04",
+  "terms_url": "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/",
+
+  "ads": false,
+  "tracking": false,
+  "analytics": false,
+  "storage_summary": "Your periods, symptoms, moods and notes are stored only on your iPhone. Hearth has no account and no server, and it never sends your data anywhere.",
+  "nothing_sent_detail": "Data leaves your iPhone only when **you** choose to share it, for example when you export a summary for your doctor or create a backup file and send it with the share sheet. Purchases are handled by Apple through the App Store; we never see your payment details.",
+
+  "processors": {},
+  "data_sent": [],
+
+  "stored_on_device": [
+    "The periods you log (start and end dates, flow), and your symptoms, moods and notes.",
+    "Your cycle settings (cycle and period length), reminder choices and app preferences.",
+    "Cycle predictions, which are calculated on your iPhone from your own history.",
+    "Whether you have unlocked the full version, checked on your device with Apple's StoreKit.",
+    "Delete everything at any time with **Settings → Privacy & Data → Delete All Data**."
+  ],
+
+  "not_collected": [
+    "Your name, email address or any account, because Hearth has no sign-in.",
+    "Your cycle, symptom and mood logs, which never leave your iPhone unless you export them yourself.",
+    "Your advertising identifier (IDFA), location, contacts or browsing history.",
+    "Analytics or crash reports, because the app includes no analytics, advertising or crash-reporting SDK.",
+    "Payment details, because purchases are processed by Apple."
+  ],
+
+  "permissions": [
+    { "name": "Face ID / Touch ID", "why": "to lock the app, only if you turn on the app lock. The check happens on your iPhone; Hearth never receives your biometric data." },
+    { "name": "Notifications", "why": "to remind you before your next period or to log your day, only if you turn reminders on. Reminders are scheduled on your iPhone and are worded discreetly." }
+  ],
+
+  "your_controls": [
+    "**Delete all your data** in **Settings → Privacy & Data → Delete All Data**, or by deleting the app.",
+    "**Export your data** for your doctor as a one-page PDF or a CSV file in **Settings → Privacy & Data**.",
+    "**Turn off reminders or the Face ID lock** in the app, or revoke Notifications or Face ID access in iOS Settings."
+  ],
+
+  "support_faq": [
+    { "q": "Is Hearth a form of contraception?", "a": "No. Predictions are for reference only. They are not medical advice and not a method of contraception. Talk to a doctor about anything that concerns your health." },
+    { "q": "Do I need an account? Where is my data?", "a": "No account is needed. Everything you log is stored only on your iPhone. Hearth has no server, so we cannot see, recover or delete your data for you." },
+    { "q": "I bought the full version. How do I get it on a new iPhone?", "a": "The full version is a one-time purchase, not a subscription. Open **Settings → Unlock full version** and tap **Restore Purchases** while signed in with the same Apple Account you used to buy." },
+    { "q": "How do I move my data to a new iPhone?", "a": "Create a backup file in **Settings → Privacy & Data → Backup & Restore**, save it (for example to Files or with AirDrop), then on the new iPhone open the same screen and restore from that file. Creating a backup is part of the full version; restoring is free." },
+    { "q": "How do I get a refund?", "a": "Refunds are handled by Apple. Request one at [reportaproblem.apple.com](https://reportaproblem.apple.com)." },
+    { "q": "How do I delete my data?", "a": "Use **Settings → Privacy & Data → Delete All Data** in the app, or delete the app. Your data lives only on your iPhone, so this removes it completely." }
+  ]
+}
