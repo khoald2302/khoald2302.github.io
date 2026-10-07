@@ -1,0 +1,78 @@
+{
+  "slug": "spotless",
+  "name": "Spotless: Clean Phone & Photos",
+  "tagline": "Free up storage by finding duplicate photos, large videos and old clutter — all on your iPhone.",
+  "app_store_id": "6775139393",
+  "contact_email": "khoald2302.ai@gmail.com",
+  "last_updated": "2026-10-07",
+  "terms_url": "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/",
+
+  "ads": false,
+  "tracking": false,
+  "storage_summary": "Your photos, videos, contacts and calendar are analysed on your device and never uploaded. Scan results and settings are stored only on your device.",
+
+  "processors": {
+    "firebase": {
+      "name": "Google Firebase (Analytics, Crashlytics)",
+      "purpose": "Tells us which features are used and reports crashes. Never used for advertising or cross-app tracking.",
+      "data": "in-app usage events, device model, OS version, app version, language, coarse region, an app-generated instance identifier and crash logs",
+      "policy_url": "https://firebase.google.com/support/privacy"
+    },
+    "apple_geocoding": {
+      "name": "Apple (Maps geocoding)",
+      "purpose": "Turns the GPS coordinates stored in your photos into a readable place name for the place-based albums.",
+      "data": "the latitude and longitude of photos shown in place-based albums — never the photos themselves",
+      "policy_url": "https://www.apple.com/legal/privacy/"
+    },
+    "cloudflare": {
+      "name": "Cloudflare (speed test)",
+      "purpose": "Measures your connection speed when you run the optional Wi-Fi speed test.",
+      "data": "meaningless filler data transferred to and from Cloudflare's public speed-test endpoint, plus your IP address as part of any internet connection",
+      "policy_url": "https://www.cloudflare.com/privacypolicy/"
+    }
+  },
+
+  "data_sent": [
+    { "what": "Usage events, device model, OS version, app identifiers", "to": "firebase", "why": "Understand usage and improve the app" },
+    { "what": "Crash and performance reports", "to": "firebase", "why": "Find and fix bugs" },
+    { "what": "GPS coordinates of photos, only when you open the place-based albums", "to": "apple_geocoding", "why": "Show a place name for each album" },
+    { "what": "Filler test data, only while you run the Wi-Fi speed test", "to": "cloudflare", "why": "Measure download and upload speed" }
+  ],
+
+  "stored_on_device": [
+    "Scan results for duplicates, similar shots, blurry photos, screenshots and large videos. The photos and videos themselves are analysed on your device and never leave it.",
+    "Contact and calendar cleanup results, including the undo history for merged contacts.",
+    "Your settings, reminders and cleanup statistics.",
+    "Items you delete go to iOS's **Recently Deleted** album, where iOS keeps them for 30 days."
+  ],
+
+  "not_collected": [
+    "Your photos, videos, files, contacts or calendar events — none of them are uploaded.",
+    "Your name, email address or any account — the app has no sign-in.",
+    "Your advertising identifier (IDFA), precise location of your device, microphone or camera."
+  ],
+
+  "permissions": [
+    { "name": "Photos", "why": "to scan your library on your device for duplicates, similar shots, blurry photos, screenshots and large videos, to delete the items you choose, and to save new images such as a still made from a Live Photo." },
+    { "name": "Contacts (optional)", "why": "only if you use the contact cleanup tool, to find and merge duplicates on your device." },
+    { "name": "Calendars (optional)", "why": "only if you use calendar cleanup, to find old past events on your device and remove the ones you confirm." },
+    { "name": "Notifications (optional)", "why": "for reminders you turn on, such as cleanup reports and charging reminders." }
+  ],
+
+  "your_controls": [
+    "**Revoke Photos, Contacts, Calendars or Notifications access** in iOS Settings → Privacy & Security.",
+    "**Recover deleted photos** from the Recently Deleted album in the Photos app within 30 days.",
+    "**Delete all app data** by deleting the app. Nothing is stored on our side."
+  ],
+
+  "subscription": {
+    "restore_location": "on the Premium screen, or in Settings → Restore Purchases"
+  },
+
+  "support_faq": [
+    { "q": "I deleted a photo by mistake.", "a": "Open the **Photos** app → **Albums** → **Recently Deleted**. iOS keeps deleted items there for 30 days." },
+    { "q": "The app finds no photos or only some of them.", "a": "Open iOS **Settings → Privacy & Security → Photos → Spotless** and choose **Full Access**. With limited access the app can only scan the photos you selected." },
+    { "q": "Are my photos uploaded anywhere?", "a": "No. Every scan runs on your iPhone. Photos, videos, contacts and calendar events never leave your device." },
+    { "q": "How do I delete my data?", "a": "Delete the app. Your data lives only on your device, so this removes it completely." }
+  ]
+}
