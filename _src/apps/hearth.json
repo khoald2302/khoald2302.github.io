@@ -16,14 +16,8 @@
     "google_analytics": {
       "name": "Google Analytics for Firebase",
       "purpose": "Measures how the app is used (for example whether onboarding was finished, which screens are opened, whether you saved a log today) so we can fix problems and improve Hearth. Events never contain dates, cycle phases, symptoms, moods, notes or predictions. Not used for advertising or cross-app tracking. You can turn it off at any time in Settings → Share Usage Data.",
-      "data": "a small set of usage events and their settings (never cycle or health data), an app-instance identifier, app version, device model, OS version, locale, approximate region derived from your IP address, and — if you installed from an Apple Ads campaign — the campaign of that install",
+      "data": "a small set of usage events and their settings (never cycle or health data), an app-instance identifier, app version, device model, OS version, locale and approximate region derived from your IP address",
       "policy_url": "https://firebase.google.com/support/privacy"
-    },
-    "apple_ads": {
-      "name": "Apple (AdServices and AdAttributionKit)",
-      "purpose": "Measures whether our ads work without tracking you. Apple tells us, anonymously, whether an install came from an ad; no advertising identifier is used.",
-      "data": "an anonymous attribution token and a coarse conversion value — no advertising identifier and no cycle or health data",
-      "policy_url": "https://www.apple.com/legal/privacy/"
     }
   },
   "data_sent": [
@@ -31,11 +25,6 @@
       "what": "Usage events (never cycle or health data), app-instance identifier, app and device info, approximate region",
       "to": "google_analytics",
       "why": "Understand how the app is used and improve it — only while **Share Usage Data** is on"
-    },
-    {
-      "what": "Anonymous attribution token and a coarse conversion value — no advertising identifier",
-      "to": "apple_ads",
-      "why": "Measure whether an ad led to the install — only while **Share Usage Data** is on"
     }
   ],
   "stored_on_device": [
@@ -67,7 +56,7 @@
     }
   ],
   "your_controls": [
-    "**Turn off usage analytics and ad measurement** in **Settings → Share Usage Data**. Nothing else in the app changes.",
+    "**Turn off usage analytics** in **Settings → Share Usage Data**. Nothing else in the app changes.",
     "**Delete all your data** in **Settings → Privacy & Data → Delete All Data**, or by deleting the app. This does not delete anything in Apple Health.",
     "**Export your data** for your doctor as a one-page PDF or a CSV file in **Settings → Privacy & Data**.",
     "**Turn off Apple Health sync, reminders or the Face ID lock** in the app, or revoke Health, Notifications or Face ID access in iOS Settings."
