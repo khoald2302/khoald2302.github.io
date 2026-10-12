@@ -2,54 +2,107 @@
   "slug": "hearth",
   "name": "Hearth: Period Tracker Calendar",
   "device_name": "Hearth",
-  "tagline": "A private period tracker you buy once — no account, no subscription, and your data stays on your iPhone.",
+  "tagline": "A private period tracker — free, no account, no subscription, and your cycle data stays on your iPhone.",
   "app_store_id": "",
   "contact_email": "khoald2302.ai@gmail.com",
-  "last_updated": "2026-10-04",
+  "last_updated": "2026-10-11",
   "terms_url": "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/",
-
   "ads": false,
   "tracking": false,
-  "analytics": false,
-  "storage_summary": "Your periods, symptoms, moods and notes are stored only on your iPhone. Hearth has no account and no server, and it never sends your data anywhere.",
-  "nothing_sent_detail": "Data leaves your iPhone only when **you** choose to share it, for example when you export a summary for your doctor or create a backup file and send it with the share sheet. Purchases are handled by Apple through the App Store; we never see your payment details.",
-
-  "processors": {},
-  "data_sent": [],
-
+  "analytics": true,
+  "storage_summary": "Your periods, symptoms, moods and notes are stored only on your iPhone. Hearth has no account and no server. The only data that leaves your iPhone is anonymous usage measurement — never your cycle or health data — which you can turn off at any time.",
+  "nothing_sent_detail": "Your cycle, symptom, mood and note data is never sent to us or to any analytics provider. It leaves your iPhone only when **you** choose to share it, for example when you export a summary for your doctor or create a backup file and send it with the share sheet.",
+  "processors": {
+    "google_analytics": {
+      "name": "Google Analytics for Firebase",
+      "purpose": "Measures how the app is used (for example whether onboarding was finished, which screens are opened, whether you saved a log today) so we can fix problems and improve Hearth. Events never contain dates, cycle phases, symptoms, moods, notes or predictions. Not used for advertising or cross-app tracking. You can turn it off at any time in Settings → Share Usage Data.",
+      "data": "a small set of usage events and their settings (never cycle or health data), an app-instance identifier, app version, device model, OS version, locale, approximate region derived from your IP address, and — if you installed from an Apple Ads campaign — the campaign of that install",
+      "policy_url": "https://firebase.google.com/support/privacy"
+    },
+    "apple_ads": {
+      "name": "Apple (AdServices and AdAttributionKit)",
+      "purpose": "Measures whether our ads work without tracking you. Apple tells us, anonymously, whether an install came from an ad; no advertising identifier is used.",
+      "data": "an anonymous attribution token and a coarse conversion value — no advertising identifier and no cycle or health data",
+      "policy_url": "https://www.apple.com/legal/privacy/"
+    }
+  },
+  "data_sent": [
+    {
+      "what": "Usage events (never cycle or health data), app-instance identifier, app and device info, approximate region",
+      "to": "google_analytics",
+      "why": "Understand how the app is used and improve it — only while **Share Usage Data** is on"
+    },
+    {
+      "what": "Anonymous attribution token and a coarse conversion value — no advertising identifier",
+      "to": "apple_ads",
+      "why": "Measure whether an ad led to the install — only while **Share Usage Data** is on"
+    }
+  ],
   "stored_on_device": [
     "The periods you log (start and end dates, flow), and your symptoms, moods and notes.",
     "Your cycle settings (cycle and period length), reminder choices and app preferences.",
     "Cycle predictions, which are calculated on your iPhone from your own history.",
-    "Whether you have unlocked the full version, checked on your device with Apple's StoreKit.",
+    "If you turn on Apple Health sync, menstrual flow you sync with Apple Health; periods imported from Health become part of your Hearth history on this iPhone.",
     "Delete everything at any time with **Settings → Privacy & Data → Delete All Data**."
   ],
-
   "not_collected": [
     "Your name, email address or any account, because Hearth has no sign-in.",
-    "Your cycle, symptom and mood logs, which never leave your iPhone unless you export them yourself.",
-    "Your advertising identifier (IDFA), location, contacts or browsing history.",
-    "Analytics or crash reports, because the app includes no analytics, advertising or crash-reporting SDK.",
-    "Payment details, because purchases are processed by Apple."
+    "Your cycle, symptom, mood and note logs and your Apple Health data, which never leave your iPhone unless you export or back them up yourself.",
+    "Your advertising identifier (IDFA), location, contacts or browsing history. Hearth does not track you across apps and never shows the App Tracking Transparency prompt.",
+    "Crash reports, because the app includes no crash-reporting SDK.",
+    "Payment details — Hearth 1.0 is free and has no in-app purchases."
   ],
-
   "permissions": [
-    { "name": "Face ID / Touch ID", "why": "to lock the app, only if you turn on the app lock. The check happens on your iPhone; Hearth never receives your biometric data." },
-    { "name": "Notifications", "why": "to remind you before your next period or to log your day, only if you turn reminders on. Reminders are scheduled on your iPhone and are worded discreetly." }
+    {
+      "name": "Face ID / Touch ID",
+      "why": "to lock the app, only if you turn on the app lock. The check happens on your iPhone; Hearth never receives your biometric data."
+    },
+    {
+      "name": "Notifications",
+      "why": "to remind you before your next period or to log your day, only if you turn reminders on. Reminders are scheduled on your iPhone and are worded discreetly."
+    },
+    {
+      "name": "Apple Health",
+      "why": "to read and write menstrual flow only, and only if you turn on Apple Health sync. The data stays on your iPhone and is never sent to us, to analytics or to iCloud."
+    }
   ],
-
   "your_controls": [
-    "**Delete all your data** in **Settings → Privacy & Data → Delete All Data**, or by deleting the app.",
+    "**Turn off usage analytics and ad measurement** in **Settings → Share Usage Data**. Nothing else in the app changes.",
+    "**Delete all your data** in **Settings → Privacy & Data → Delete All Data**, or by deleting the app. This does not delete anything in Apple Health.",
     "**Export your data** for your doctor as a one-page PDF or a CSV file in **Settings → Privacy & Data**.",
-    "**Turn off reminders or the Face ID lock** in the app, or revoke Notifications or Face ID access in iOS Settings."
+    "**Turn off Apple Health sync, reminders or the Face ID lock** in the app, or revoke Health, Notifications or Face ID access in iOS Settings."
   ],
-
   "support_faq": [
-    { "q": "Is Hearth a form of contraception?", "a": "No. Predictions are for reference only. They are not medical advice and not a method of contraception. Talk to a doctor about anything that concerns your health." },
-    { "q": "Do I need an account? Where is my data?", "a": "No account is needed. Everything you log is stored only on your iPhone. Hearth has no server, so we cannot see, recover or delete your data for you." },
-    { "q": "I bought the full version. How do I get it on a new iPhone?", "a": "The full version is a one-time purchase, not a subscription. Open **Settings → Unlock full version** and tap **Restore Purchases** while signed in with the same Apple Account you used to buy." },
-    { "q": "How do I move my data to a new iPhone?", "a": "Create a backup file in **Settings → Privacy & Data → Backup & Restore**, save it (for example to Files or with AirDrop), then on the new iPhone open the same screen and restore from that file. Creating a backup is part of the full version; restoring is free." },
-    { "q": "How do I get a refund?", "a": "Refunds are handled by Apple. Request one at [reportaproblem.apple.com](https://reportaproblem.apple.com)." },
-    { "q": "How do I delete my data?", "a": "Use **Settings → Privacy & Data → Delete All Data** in the app, or delete the app. Your data lives only on your iPhone, so this removes it completely." }
-  ]
+    {
+      "q": "Is Hearth a form of contraception?",
+      "a": "No. Predictions are for reference only. They are not medical advice and not a method of contraception. Talk to a doctor about anything that concerns your health."
+    },
+    {
+      "q": "Is Hearth free?",
+      "a": "Yes. Every feature in Hearth 1.0 is free, with no subscription and no in-app purchase."
+    },
+    {
+      "q": "Do I need an account? Where is my data?",
+      "a": "No account is needed. Everything you log is stored only on your iPhone. Hearth has no server, so we cannot see, recover or delete your data for you. Anonymous usage statistics (never cycle or health data) help us improve the app; you can turn them off in Settings → Share Usage Data."
+    },
+    {
+      "q": "How do I move my data to a new iPhone?",
+      "a": "Create a backup file in **Settings → Privacy & Data → Backup & Restore**, save it (for example to Files or with AirDrop), then on the new iPhone open the same screen and restore from that file."
+    },
+    {
+      "q": "How do I delete my data?",
+      "a": "Use **Settings → Privacy & Data → Delete All Data** in the app, or delete the app. Your cycle data lives only on your iPhone, so this removes it completely. Data you synced to Apple Health stays in the Health app until you delete it there."
+    }
+  ],
+  "health": {
+    "read": [
+      "menstrual flow"
+    ],
+    "read_why": "used on your iPhone to add periods you logged in Apple Health to your Hearth history — only if you turn on Apple Health sync.",
+    "write": [
+      "menstrual flow (periods you log in Hearth)"
+    ],
+    "write_why": "saved to Apple Health with your permission. When you shorten or delete a period in Hearth, Hearth removes only the samples it wrote itself; it never deletes data from other apps. Deleting all data in Hearth does not delete anything in Apple Health.",
+    "never_shared": true
+  }
 }
