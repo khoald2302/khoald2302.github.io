@@ -104,5 +104,6 @@
     ],
     "write_why": "saved to Apple Health with your permission. When you shorten or delete a period in Hearth, Hearth removes only the samples it wrote itself; it never deletes data from other apps. Deleting all data in Hearth does not delete anything in Apple Health.",
     "never_shared": true
-  }
+  },
+  "purchases": false
 }

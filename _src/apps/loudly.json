@@ -91,5 +91,6 @@
       "q": "How do I delete my data?",
       "a": "Remove tracks in the app, or delete the app. Your files and settings live only on your iPhone, so deleting the app removes them completely. To stop anonymous usage measurement, turn off **Share usage data** in Settings → Privacy."
     }
-  ]
+  ],
+  "purchases": false
 }

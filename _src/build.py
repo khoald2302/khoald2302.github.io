@@ -312,11 +312,12 @@ def privacy(app):
         bases.append(("For AI features" if consent else "For Apple Health") + (" and Apple Health" if consent and health else "") + " we rely on your <strong>consent</strong>, which you can withdraw at any time.")
     if app["ads"]:
         bases.append("For personalised ads we rely on your <strong>consent</strong> (the App Tracking Transparency prompt and, where the law requires it, the ad consent form); you can withdraw it at any time. Non-personalised ads rely on our legitimate interest in keeping the app free.")
-    purchases = "For purchases, we rely on performing our contract with you."
+    # spec "purchases": false (free app, no IAP) drops the contract basis for purchases
+    purchases = "For purchases, we rely on performing our contract with you." if app.get("purchases", True) else ""
     if app.get("analytics", True):
         basis = " ".join(bases) + " For analytics and crash diagnostics we rely on our legitimate interest in keeping the app working and improving it. " + purchases
     else:
-        basis = " ".join(bases + [purchases])
+        basis = " ".join(bases + ([purchases] if purchases else []))
     sections.append(f"""<h2>{n}. Legal bases</h2>
 <p>{basis}</p>""")
     n += 1
