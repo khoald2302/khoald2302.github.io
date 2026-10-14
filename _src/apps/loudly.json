@@ -50,7 +50,7 @@
     }
   ],
   "your_controls": [
-    "**Turn off usage analytics and ad measurement** in Settings → Privacy → Share usage data. Nothing else in the app changes.",
+    "**Turn off usage analytics** in Settings → Privacy → Share usage data. Nothing else in the app changes.",
     "**Remove any track or video** from your Loudly library in the app; the original file in Files or your music library is not touched.",
     "**Revoke Media & Apple Music access** in iOS Settings at any time; files you imported from Files keep working.",
     "**Delete all your data** by deleting the app."
