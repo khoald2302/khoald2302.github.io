@@ -9,7 +9,7 @@
   "terms_url": "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/",
   "ads": false,
   "tracking": false,
-  "analytics": false,
+  "analytics": true,
   "storage_summary": "Your notes, tasks, ideas, events and settings are stored only on your device.",
   "ai_consent": {
     "screen_name": "Your thoughts stay yours.",
@@ -31,8 +31,14 @@
     },
     "firebase": {
       "name": "Google Firebase (Remote Config)",
-      "purpose": "Delivers a small app configuration value the AI feature needs. No analytics, no crash reporting, never used for advertising or tracking.",
+      "purpose": "Delivers a small app configuration value the AI feature needs. Never used for advertising or tracking.",
       "data": "an app-instance identifier, app version, OS version and locale, sent when the configuration is fetched",
+      "policy_url": "https://firebase.google.com/support/privacy"
+    },
+    "google_analytics": {
+      "name": "Google Analytics for Firebase",
+      "purpose": "Measures how the app is used (for example whether onboarding was finished, a capture was saved or the Pro screen was opened) so we can fix problems and improve Blurt. Not used for advertising or cross-app tracking, and it does not read your advertising identifier.",
+      "data": "usage events and their settings (never your notes, transcripts or the names in them), an app-instance identifier, app version, device model, OS version, locale, approximate region derived from your IP address",
       "policy_url": "https://firebase.google.com/support/privacy"
     }
   },
@@ -55,6 +61,11 @@
       "why": "Convert speech to text for languages iOS cannot transcribe offline"
     },
     {
+      "what": "Usage events (for example capture saved, Pro screen opened, purchase result), app version, device model, OS version and an app-instance identifier",
+      "to": "google_analytics",
+      "why": "Understand usage and improve the app"
+    },
+    {
       "what": "App version, OS version, locale and an app-instance identifier",
       "to": "firebase",
       "why": "Deliver the app configuration"
@@ -70,7 +81,7 @@
     "Your name, email address or any account — the app has no sign-in.",
     "Your voice recordings — audio is turned into text and is never saved by the app.",
     "Your advertising identifier (IDFA), precise location, contacts or photos.",
-    "Usage analytics or crash reports — the app includes no analytics or crash-reporting SDK."
+    "Crash reports — the app includes no crash-reporting SDK."
   ],
   "permissions": [
     {
