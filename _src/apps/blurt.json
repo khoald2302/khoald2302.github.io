@@ -1,0 +1,120 @@
+{
+  "slug": "blurt",
+  "name": "Blurt: Voice To-Do List",
+  "device_name": "Blurt",
+  "tagline": "Say it once. Blurt sorts it into tasks, ideas and events.",
+  "app_store_id": "6800755761",
+  "contact_email": "khoald2302.ai@gmail.com",
+  "last_updated": "2026-10-16",
+  "terms_url": "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/",
+  "ads": false,
+  "tracking": false,
+  "analytics": false,
+  "storage_summary": "Your notes, tasks, ideas, events and settings are stored only on your device.",
+  "ai_consent": {
+    "screen_name": "Your thoughts stay yours.",
+    "withdraw": "Open **Settings → Privacy → AI processing** and decline. From then on nothing is sent to OpenAI; new recordings are saved as plain transcripts."
+  },
+  "processors": {
+    "openai": {
+      "name": "OpenAI",
+      "purpose": "Sorts a note into tasks, ideas and events, gives it a title and short summary, and reads out dates, places and the people, projects and places it mentions.",
+      "data": "the text of your note (transcribed from your voice or typed), today's date and your time zone, and the names of people, projects and places you have mentioned in earlier notes",
+      "policy_url": "https://openai.com/policies/privacy-policy/",
+      "requires_consent": true
+    },
+    "apple_speech": {
+      "name": "Apple (Speech Recognition)",
+      "purpose": "Turns your voice into text for a language iOS cannot transcribe offline, only if you turn on Server recognition.",
+      "data": "the audio of your voice while you are recording",
+      "policy_url": "https://www.apple.com/legal/privacy/"
+    },
+    "firebase": {
+      "name": "Google Firebase (Remote Config)",
+      "purpose": "Delivers a small app configuration value the AI feature needs. No analytics, no crash reporting, never used for advertising or tracking.",
+      "data": "an app-instance identifier, app version, OS version and locale, sent when the configuration is fetched",
+      "policy_url": "https://firebase.google.com/support/privacy"
+    }
+  },
+  "data_sent": [
+    {
+      "what": "The text of your note, with today's date and your time zone",
+      "to": "openai",
+      "why": "Sort it into tasks, ideas and events and resolve words like 'tomorrow'",
+      "user_content": true
+    },
+    {
+      "what": "Names of people, projects and places from your earlier notes",
+      "to": "openai",
+      "why": "Keep the same person or project under one name across notes",
+      "user_content": true
+    },
+    {
+      "what": "Voice audio while you record, only with Server recognition turned on",
+      "to": "apple_speech",
+      "why": "Convert speech to text for languages iOS cannot transcribe offline"
+    },
+    {
+      "what": "App version, OS version, locale and an app-instance identifier",
+      "to": "firebase",
+      "why": "Deliver the app configuration"
+    }
+  ],
+  "stored_on_device": [
+    "Your notes and their transcripts, and the tasks, ideas and events sorted from them.",
+    "The people, projects and places linked between your notes.",
+    "Your settings, your AI-processing choice and your free AI-sort count.",
+    "Delete a note and everything sorted from it at any time; deleting the app removes all of it."
+  ],
+  "not_collected": [
+    "Your name, email address or any account — the app has no sign-in.",
+    "Your voice recordings — audio is turned into text and is never saved by the app.",
+    "Your advertising identifier (IDFA), precise location, contacts or photos.",
+    "Usage analytics or crash reports — the app includes no analytics or crash-reporting SDK."
+  ],
+  "permissions": [
+    {
+      "name": "Microphone and Speech Recognition",
+      "why": "to turn what you say into text. Transcription runs on your device where iOS supports it; with Server recognition turned on, Apple's speech service transcribes the languages iOS cannot do offline."
+    },
+    {
+      "name": "Reminders",
+      "why": "to create reminders for the dated tasks you approve. Blurt never changes or deletes a reminder it did not create."
+    },
+    {
+      "name": "Calendars",
+      "why": "to add the events you approve and to let you pick which calendar they go to. Blurt never changes or deletes an event it did not create."
+    }
+  ],
+  "your_controls": [
+    "**Withdraw AI consent** in **Settings → Privacy → AI processing** by declining. Nothing is sent to OpenAI after that.",
+    "**Turn Server recognition off** in Settings to keep all transcription on your device.",
+    "**Revoke Microphone, Speech Recognition, Reminders or Calendars access** in iOS Settings.",
+    "**Delete notes** in the app, or delete the app to remove everything."
+  ],
+  "subscription": {
+    "restore_location": "on the Blurt Pro screen (Restore Purchases, at the bottom)"
+  },
+  "support_faq": [
+    {
+      "q": "Blurt asks me to agree before it sorts my notes. Why?",
+      "a": "Sorting sends the text of your note to OpenAI. We ask first so you know exactly what is shared. If you decline, Blurt still records and keeps your transcript, it just does not sort it."
+    },
+    {
+      "q": "Recording does not turn into text.",
+      "a": "Open iOS **Settings → Blurt** and turn on **Microphone** and **Speech Recognition**. Some languages, Vietnamese among them, need **Server recognition** turned on in Blurt's Settings."
+    },
+    {
+      "q": "Blurt misheard a name or a word.",
+      "a": "Speak one language per recording and check the underlined words on the review screen before saving. You can edit the transcript of any note and Blurt sorts it again."
+    },
+    {
+      "q": "How many AI sorts are free?",
+      "a": "Your first 3 notes are sorted for free. Blurt Pro unlocks unlimited sorting."
+    },
+    {
+      "q": "How do I delete my data?",
+      "a": "Delete a note in the app to remove it and everything sorted from it, or delete the app. Your notes live only on your device."
+    }
+  ]
+}
