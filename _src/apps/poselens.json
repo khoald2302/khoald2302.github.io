@@ -1,0 +1,97 @@
+{
+  "slug": "poselens",
+  "name": "PoseLens: Pose Guide Camera",
+  "device_name": "PoseLens",
+  "tagline": "A camera that shows a pose outline on your viewfinder, scores how well you match it and takes the photo for you.",
+  "app_store_id": "6824555509",
+  "contact_email": "khoald2302.ai@gmail.com",
+  "last_updated": "2026-10-19",
+  "terms_url": "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/",
+  "ads": false,
+  "tracking": false,
+  "analytics": true,
+  "storage_summary": "Pose matching, scene recognition and every photo you take are processed only on your iPhone with Apple's on-device Vision framework. Camera frames are analysed in memory and are never saved, uploaded or shared. The only data that leaves your iPhone is anonymous usage measurement — never your photos or camera frames.",
+  "processors": {
+    "google_analytics": {
+      "name": "Google Analytics for Firebase",
+      "purpose": "Measures how the app is used (for example whether onboarding was finished, whether a photo was taken, whether the Pro screen was opened and a purchase completed) so we can fix problems and improve PoseLens. Not used for advertising or cross-app tracking.",
+      "data": "a small set of usage events and their settings (never your photos, camera frames or body-pose data), an app-instance identifier, app version, device model, OS version, locale, approximate region derived from your IP address, and purchase events (product and result)",
+      "policy_url": "https://firebase.google.com/support/privacy"
+    },
+    "apple_storekit": {
+      "name": "Apple (App Store purchases)",
+      "purpose": "Processes your purchase or subscription payment and verifies that you own PoseLens Pro.",
+      "data": "your purchase receipt, handled by Apple. We never see your payment details, Apple Account or name.",
+      "policy_url": "https://www.apple.com/legal/privacy/"
+    }
+  },
+  "data_sent": [
+    {
+      "what": "Usage events (no photos, no camera frames, no body-pose data), app-instance identifier, app and device info, approximate region, purchase events",
+      "to": "google_analytics",
+      "why": "Understand how the app is used and improve it"
+    },
+    {
+      "what": "Your purchase receipt",
+      "to": "apple_storekit",
+      "why": "Confirm that you own PoseLens Pro"
+    }
+  ],
+  "stored_on_device": [
+    "The photos you take are saved to your Photos library; PoseLens keeps the photos of the current session in memory only.",
+    "A photo you pick for **From your photo** is opened through Apple's photo picker, read on your iPhone to build a pose outline for that session, and is not saved or sent anywhere.",
+    "Your settings — mode, aspect ratio, sensitivity, sounds, Guided capture, the last pose you used and how many free **From your photo** uses are left.",
+    "Deleting the app removes everything PoseLens stored."
+  ],
+  "not_collected": [
+    "Your name, email address or any account — the app has no sign-in.",
+    "Your photos, camera frames, body-pose measurements or anything you photograph.",
+    "Your photo library — PoseLens can only add photos; a photo you copy a pose from is chosen by you with the system photo picker.",
+    "Your advertising identifier (IDFA), precise location, contacts or browsing history. PoseLens does not track you across apps and never shows the App Tracking Transparency prompt.",
+    "Crash reports — the app does not include a crash-reporting SDK."
+  ],
+  "permissions": [
+    {
+      "name": "Camera",
+      "why": "to show the pose outline on your viewfinder, check how well you match it and take the photo. Frames are analysed on your iPhone and never saved or uploaded."
+    },
+    {
+      "name": "Photos (add only)",
+      "why": "to save the photos you take to your photo library. PoseLens cannot read, browse or change the photos already in your library."
+    }
+  ],
+  "your_controls": [
+    "**Revoke Camera or Photos access** in iOS Settings → PoseLens.",
+    "**Delete your data** by deleting the app — everything PoseLens stored is on your iPhone.",
+    "**Cancel the yearly plan** in iOS Settings → your name → Subscriptions, or from **Manage subscription** in PoseLens Settings."
+  ],
+  "subscription": {
+    "restore_location": "in PoseLens Settings or on the PoseLens Pro screen"
+  },
+  "support_faq": [
+    {
+      "q": "The match score doesn't show up.",
+      "a": "Pose matching needs to see at least three quarters of your body (head to mid-thigh). Step back, or prop your iPhone further away, until the outline fits. Good light helps."
+    },
+    {
+      "q": "How does Auto capture work?",
+      "a": "When your match score reaches the threshold and you hold still for a moment, PoseLens takes the photo for you. Turn Auto on or off with the **Auto** button on the camera screen, and change the sensitivity (Relaxed, Normal, Strict) in Settings. Moving poses such as walking or jumping never stay still long enough, so use the shutter or the volume button for those."
+    },
+    {
+      "q": "What is Guided capture?",
+      "a": "A step bar at the bottom of the camera — Distance, Best angle, Pose — shows one tip at a time: auto zoom frames you at the right size, then angle tips, then pose fixes. Tap a step to jump to it, or turn Guided capture off in Settings. In Solo the steps are Distance and Pose."
+    },
+    {
+      "q": "Can I copy a pose from my own photo?",
+      "a": "Yes. In the library, tap **From your photo** and pick a photo with one person, whole body visible. PoseLens turns the pose into an outline for that session only; the photo is not saved or uploaded. You get 3 free uses, then it is included with PoseLens Pro."
+    },
+    {
+      "q": "What's free and what do I get with PoseLens Pro?",
+      "a": "Free: 20 poses with Guided capture and Auto capture, plus 3 uses of **From your photo**. Pro: all 80 poses, unlimited **From your photo**, and new pose packs added in app updates. Choose Lifetime (pay once) or Yearly (renews automatically each year). There is no free trial and no weekly plan."
+    },
+    {
+      "q": "Where are my photos saved?",
+      "a": "In your Photos library. PoseLens only has permission to add photos, so it shows the photos taken in the current session but cannot open older ones. If you said no to Camera or Photos access, open iOS **Settings → PoseLens** and turn Camera on, or set Photos to **Add Photos Only**."
+    }
+  ]
+}
