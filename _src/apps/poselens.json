@@ -5,7 +5,7 @@
   "tagline": "A camera that shows a pose outline on your viewfinder, scores how well you match it and takes the photo for you.",
   "app_store_id": "6824555509",
   "contact_email": "khoald2302.ai@gmail.com",
-  "last_updated": "2026-10-19",
+  "last_updated": "2026-10-21",
   "terms_url": "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/",
   "ads": false,
   "tracking": false,
@@ -46,7 +46,7 @@
   "not_collected": [
     "Your name, email address or any account — the app has no sign-in.",
     "Your photos, camera frames, body-pose measurements or anything you photograph.",
-    "Your photo library — PoseLens can only add photos; a photo you copy a pose from is chosen by you with the system photo picker.",
+    "Your photo library — PoseLens only asks for full Photos access if you choose to delete a photo you took with it, and it never browses your library. A photo you copy a pose from is chosen by you with the system photo picker.",
     "Your advertising identifier (IDFA), precise location, contacts or browsing history. PoseLens does not track you across apps and never shows the App Tracking Transparency prompt.",
     "Crash reports — the app does not include a crash-reporting SDK."
   ],
@@ -56,8 +56,8 @@
       "why": "to show the pose outline on your viewfinder, check how well you match it and take the photo. Frames are analysed on your iPhone and never saved or uploaded."
     },
     {
-      "name": "Photos (add only)",
-      "why": "to save the photos you take to your photo library. PoseLens cannot read, browse or change the photos already in your library."
+      "name": "Photos",
+      "why": "to save the photos you take to your photo library (add-only access). PoseLens only asks for full Photos access if you choose to delete a photo you took with it, and it never browses your library."
     }
   ],
   "your_controls": [
@@ -91,7 +91,7 @@
     },
     {
       "q": "Where are my photos saved?",
-      "a": "In your Photos library. PoseLens only has permission to add photos, so it shows the photos taken in the current session but cannot open older ones. If you said no to Camera or Photos access, open iOS **Settings → PoseLens** and turn Camera on, or set Photos to **Add Photos Only**."
+      "a": "In your Photos library. PoseLens shows the photos taken in the current session. If you delete a photo from inside PoseLens, iOS asks for full Photos access the first time; PoseLens never asks otherwise and never browses your library. If you said no to Camera or Photos access, open iOS **Settings → PoseLens** and turn Camera on, or set Photos to **Add Photos Only**."
     }
   ]
 }
