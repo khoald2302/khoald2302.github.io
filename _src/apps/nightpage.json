@@ -1,0 +1,78 @@
+{
+  "slug": "nightpage",
+  "name": "Nightpage: PDF Book Reader",
+  "device_name": "Nightpage",
+  "tagline": "Read PDF books, listen to them, and scan paper books — entirely on your iPhone and iPad.",
+  "app_store_id": "",
+  "contact_email": "khoald2302.ai@gmail.com",
+  "last_updated": "2026-10-22",
+
+  "ads": true,
+  "tracking": true,
+  "tracking_detail": "The free version shows ads from Google AdMob in the Library — never on the reading or listening screens. If you choose **Allow** in the App Tracking Transparency prompt, Google AdMob may use your device's advertising identifier (IDFA) to personalise ads and measure them across other companies' apps. If you choose **Ask App Not to Track**, the IDFA is not used, ads are not personalised, and every feature keeps working. You can change this at any time in *iOS Settings → Privacy & Security → Tracking*. Nightpage Pro removes ads.",
+  "storage_summary": "Your books, the pages you scan, the text recognised from them and your reading position are stored only on your device. Text recognition and read-aloud run on your device; your books are never uploaded.",
+
+  "processors": {
+    "admob": {
+      "name": "Google AdMob (Google Mobile Ads and User Messaging Platform)",
+      "purpose": "Shows the ads that keep the free version free, measures how they perform, and asks for your ad-privacy choices where the law requires it.",
+      "data": "your advertising identifier (IDFA) only if you allow tracking, your IP address, device model, OS version, and your interactions with ads (views and taps)",
+      "policy_url": "https://policies.google.com/privacy"
+    },
+    "firebase": {
+      "name": "Google Firebase (Google Analytics for Firebase, Crashlytics)",
+      "purpose": "Tells us which features are used — for example whether a book was opened, read aloud or scanned — and reports crashes. Usage events never include the titles or contents of your books.",
+      "data": "in-app usage events, device model, OS version, app-generated identifiers and crash logs",
+      "policy_url": "https://firebase.google.com/support/privacy"
+    }
+  },
+
+  "data_sent": [
+    { "what": "Advertising identifier (IDFA) — only if you allow tracking", "to": "admob", "why": "Personalise and measure ads" },
+    { "what": "IP address, device model, OS version and ad interactions", "to": "admob", "why": "Show ads, prevent ad fraud and measure ad performance" },
+    { "what": "Your ad-privacy choices (where the law requires a consent form)", "to": "admob", "why": "Remember and respect your choices" },
+    { "what": "In-app usage events, device model, OS version and app identifiers — never book titles or contents", "to": "firebase", "why": "Understand which features are used and improve the app" },
+    { "what": "Crash logs", "to": "firebase", "why": "Find and fix crashes" }
+  ],
+
+  "stored_on_device": [
+    "The PDFs you add to your library. They are copied into the app's own storage on your device.",
+    "The pages you scan with the camera, the text recognised from them, and the books made from them. Text recognition (Apple Vision) runs on your device; your pages are never uploaded.",
+    "Read-aloud uses the voices built into iOS and runs on your device. The text being read is never sent anywhere.",
+    "Your reading position, page theme, brightness, voice and speed settings.",
+    "Delete a book in the **Library** (touch and hold its cover → Delete), or delete the app to remove everything."
+  ],
+
+  "not_collected": [
+    "Your name, email address or any account — the app has no sign-in.",
+    "The titles or contents of your books, or the pages you scan.",
+    "Your photo library — the app does not ask for access to it.",
+    "Your precise location, contacts, microphone or browsing history."
+  ],
+
+  "permissions": [
+    { "name": "Camera", "why": "to scan pages of your paper books. Scans and the text recognised from them stay on your device." },
+    { "name": "Tracking (App Tracking Transparency)", "why": "to ask whether ads may use your advertising identifier. Saying no does not limit any feature." }
+  ],
+
+  "your_controls": [
+    "**Change your ad-privacy choices** in *Settings → Privacy Choices* (shown in regions where the law requires it, such as the EEA, the UK and some US states).",
+    "**Stop tracking** in *iOS Settings → Privacy & Security → Tracking*.",
+    "**Remove ads** with Nightpage Pro.",
+    "**Revoke Camera access** in *iOS Settings → Nightpage*.",
+    "**Delete your books** in the Library, or delete the app to remove everything."
+  ],
+
+  "subscription": {
+    "restore_location": "in Settings → Nightpage Pro → Restore Purchases, and at the bottom of the Nightpage Pro screen"
+  },
+
+  "support_faq": [
+    { "q": "Are my books or scans uploaded anywhere?", "a": "No. Your PDFs, scanned pages, recognised text and reading positions stay on your device. Text recognition and read-aloud run on your device." },
+    { "q": "Read-aloud skipped a line or misread a word on a scanned page. What can I do?", "a": "Pages marked **Check page** may have missed a line. Tap the badge and retake that page with the book pressed flat in good light. Retakes do not use your free scan pages." },
+    { "q": "How do I get a better reading voice?", "a": "Nightpage uses the voices installed on your device. Download an Enhanced or Premium voice in *iOS Settings → Accessibility → Spoken Content → Voices*, then pick it in *Settings → Voice*." },
+    { "q": "What does Nightpage Pro include?", "a": "Unlimited scanning, unlimited listening and no ads. Choose a yearly subscription or a one-time Lifetime purchase. Both work with Family Sharing." },
+    { "q": "How do I restore my purchase on a new device?", "a": "Open *Settings → Nightpage Pro → Restore Purchases*, signed in with the same Apple ID you bought with." },
+    { "q": "How do I delete my data?", "a": "Delete a book in the Library, or delete the app. Everything lives only on your device, so this removes it completely." }
+  ]
+}
