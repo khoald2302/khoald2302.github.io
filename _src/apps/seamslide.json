@@ -1,0 +1,74 @@
+{
+  "slug": "seamslide",
+  "name": "Seamslide: Carousel & Collage",
+  "device_name": "Seamslide",
+  "tagline": "Make seamless carousels, profile grids and scrolling videos from your photos — entirely on your iPhone.",
+  "app_store_id": "",
+  "contact_email": "khoald2302.ai@gmail.com",
+  "last_updated": "2026-10-23",
+  "terms_url": "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/",
+
+  "ads": false,
+  "tracking": false,
+  "analytics": true,
+  "storage_summary": "Your carousels, the photos you add to them, background cut-outs and your Brand Kit are stored only on your iPhone. Editing, background removal and export all run on your device; your photos are never uploaded.",
+
+  "processors": {
+    "google_analytics": {
+      "name": "Google Analytics for Firebase",
+      "purpose": "Measures how the app is used (for example whether a carousel was created, exported or saved as a video, whether the Pro screen was opened and a purchase completed, and which errors people run into) so we can fix problems and improve Seamslide. Not used for advertising or cross-app tracking.",
+      "data": "a small set of usage events and their settings (never your photos, your text or anything you design), an app-instance identifier, app version, device model, OS version, locale, approximate region derived from your IP address, and purchase events (product and result)",
+      "policy_url": "https://firebase.google.com/support/privacy"
+    },
+    "apple_storekit": {
+      "name": "Apple (App Store purchases)",
+      "purpose": "Processes your purchase or subscription payment and verifies that you own Seamslide Pro.",
+      "data": "your purchase receipt, handled by Apple. We never see your payment details, Apple Account or name.",
+      "policy_url": "https://www.apple.com/legal/privacy/"
+    }
+  },
+
+  "data_sent": [
+    { "what": "Usage events (no photos, no text you type, nothing you design), app-instance identifier, app and device info, approximate region, purchase events", "to": "google_analytics", "why": "Understand how the app is used and improve it" },
+    { "what": "Your purchase receipt", "to": "apple_storekit", "why": "Confirm that you own Seamslide Pro" }
+  ],
+
+  "stored_on_device": [
+    "Your carousels and the photos you add to them. Photos you pick with Apple's photo picker are copied into the app's own storage on your iPhone, resized to at most 4096 pixels.",
+    "Background cut-outs. **Remove Background** uses Apple Vision on your iPhone; the photo never leaves your device.",
+    "Your Brand Kit — colours, fonts and logo.",
+    "Your settings — export quality, snapping and whether you have seen the introduction.",
+    "Delete a carousel in **Projects** (touch and hold it → Delete), or delete the app to remove everything."
+  ],
+
+  "not_collected": [
+    "Your name, email address or any account — the app has no sign-in.",
+    "Your photos, the text you add or anything you design.",
+    "Your photo library — Seamslide never browses it. You choose photos with Apple's photo picker, and the app only asks to **add** finished slides, grid tiles and videos to your library.",
+    "Your advertising identifier (IDFA), precise location, contacts, microphone or browsing history. Seamslide shows no ads, does not track you across apps and never shows the App Tracking Transparency prompt."
+  ],
+
+  "permissions": [
+    { "name": "Photos (add only)", "why": "to save your finished slides, grid tiles and videos to your photo library, in order. Seamslide cannot read your library with this permission." }
+  ],
+
+  "your_controls": [
+    "**Revoke Photos access** in *iOS Settings → Seamslide*. You can still share slides with the share button.",
+    "**Delete your data** by deleting carousels in Projects, or by deleting the app — everything Seamslide stored is on your iPhone.",
+    "**Cancel a subscription** in *iOS Settings → your name → Subscriptions*, or from **Manage Subscription** in Seamslide Settings."
+  ],
+
+  "subscription": {
+    "restore_location": "in Settings → Restore Purchases, and at the bottom of the Seamslide Pro screen"
+  },
+
+  "support_faq": [
+    { "q": "Are my photos uploaded anywhere?", "a": "No. Editing, background removal and export all run on your iPhone. Your carousels and photos stay on your device." },
+    { "q": "Why do my slides look sharp in Seamslide but soft on Instagram?", "a": "Use **Settings → Export Quality → Standard**. It exports at exactly 1080 pixels wide, the size Instagram shows, so Instagram does not resize your photos again." },
+    { "q": "In which order should I post my slides?", "a": "Seamslide saves your slides to Photos in order, slide 1 first. In Instagram, select them in the same order. For profile grids, post the tile marked **1** first — it is the bottom-right tile." },
+    { "q": "Is there a free trial?", "a": "No, and you will never be charged unless you buy. The free version lets you make and export carousels of up to 20 slides, with a small Seamslide mark on the last slide." },
+    { "q": "What does Seamslide Pro include?", "a": "No watermark, all templates and fonts, background removal, video export, Brand Kit, and 3×2 and 3×3 profile grids. Choose monthly, yearly or a one-time Lifetime purchase. Yearly and Lifetime work with Family Sharing." },
+    { "q": "How do I restore my purchase on a new device?", "a": "Open *Settings → Restore Purchases*, signed in with the same Apple ID you bought with." },
+    { "q": "How do I delete my data?", "a": "Delete a carousel in Projects, or delete the app. Everything lives only on your iPhone, so this removes it completely." }
+  ]
+}
