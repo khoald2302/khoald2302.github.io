@@ -1,0 +1,112 @@
+{
+  "slug": "tracear",
+  "name": "TraceAR: AR Drawing Sketch",
+  "device_name": "TraceAR",
+  "tagline": "Trace any picture onto real paper: your iPhone camera shows a faint outline over the page while you draw along with your own pencil.",
+  "app_store_id": "6829158020",
+  "contact_email": "khoald2302.ai@gmail.com",
+  "last_updated": "2026-10-31",
+  "terms_url": "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/",
+
+  "ads": false,
+  "tracking": false,
+  "analytics": true,
+  "storage_summary": "Your projects, sketches, finished drawings, recordings, favorites and settings are stored only on your iPhone. Turning photos into line art, tracing over the camera, Light Box and Text Trace all run on your device; your photos, drawings and the text you type are never uploaded.",
+
+  "processors": {
+    "google_analytics": {
+      "name": "Google Analytics for Firebase",
+      "purpose": "Measures how the app is used (for example whether onboarding was finished, whether a tracing session was started or a drawing saved, whether the Pro screen was opened and a purchase completed, and which errors people run into) so we can fix problems and improve TraceAR. Not used for advertising or cross-app tracking.",
+      "data": "a small set of usage events and their settings (never your photos, camera frames, drawings, recordings or the text you type), an app-instance identifier, app version, device model, OS version, locale, approximate region derived from your IP address, and purchase events (product and result)",
+      "policy_url": "https://firebase.google.com/support/privacy"
+    },
+    "apple_storekit": {
+      "name": "Apple (App Store purchases)",
+      "purpose": "Processes your purchase or subscription payment and verifies that you own TraceAR Pro.",
+      "data": "your purchase receipt, handled by Apple. We never see your payment details, Apple Account or name.",
+      "policy_url": "https://www.apple.com/legal/privacy/"
+    }
+  },
+
+  "data_sent": [
+    {
+      "what": "Usage events (no photos, camera frames, drawings, recordings or typed text), app-instance identifier, app and device info, approximate region, purchase events",
+      "to": "google_analytics",
+      "why": "Understand how the app is used and improve it"
+    },
+    {
+      "what": "Your purchase receipt",
+      "to": "apple_storekit",
+      "why": "Confirm that you own TraceAR Pro"
+    }
+  ],
+
+  "stored_on_device": [
+    "Projects you trace: the template or photo, the line-art sketch made from it, its position, opacity and drawing time.",
+    "A photo you import with the system photo picker, paste, or share to TraceAR from another app (the **Trace with TraceAR** share extension only places the image in TraceAR's own storage on your iPhone).",
+    "Photos of your finished drawings and time-lapse recordings — only when you tap Finish or Record. They are copied to your Photos library or shared only when you choose Save to Photos or Share.",
+    "The text, font and style you choose in Text Trace.",
+    "Favorites, collections, lesson progress, daily challenge streaks and your settings. The home-screen widget reads your streak from the same on-device storage.",
+    "Deleting the app removes everything TraceAR stored."
+  ],
+
+  "not_collected": [
+    "Your name, email address or any account — the app has no sign-in.",
+    "Your photos, camera frames, drawings, recordings, or anything you type in Text Trace.",
+    "Your photo library — TraceAR uses Apple's photo picker, which only gives the app the photo you pick, and add-only access when you save a drawing to Photos.",
+    "Your advertising identifier (IDFA), precise location, contacts or browsing history. TraceAR does not track you across apps and never shows the App Tracking Transparency prompt.",
+    "Crash reports — the app does not include a crash-reporting SDK."
+  ],
+
+  "permissions": [
+    {
+      "name": "Camera",
+      "why": "to show your template over the paper so you can trace it, and to photograph or record your drawing when you tap Finish or Record. The camera runs only on the trace screen; frames are processed on your iPhone and never uploaded."
+    },
+    {
+      "name": "Photos (add only)",
+      "why": "to save your finished drawing or recording to your Photos library when you choose Save to Photos. TraceAR cannot read your library."
+    },
+    {
+      "name": "Notifications",
+      "why": "only if you turn on the Daily Reminder, to remind you of the daily challenge at the time you choose. Reminders are scheduled on your iPhone."
+    }
+  ],
+
+  "your_controls": [
+    "**Revoke Camera, Photos or Notifications access** in iOS Settings → TraceAR.",
+    "**Delete a project or drawing** from My Art, or **delete all your data** by deleting the app — everything TraceAR stored is on your iPhone.",
+    "**Cancel a subscription** in iOS Settings → your name → Subscriptions, or from **Manage Subscription** in TraceAR Settings. Pro Lifetime is a one-time purchase and never renews."
+  ],
+
+  "subscription": {
+    "restore_location": "in TraceAR Settings or on the TraceAR Pro screen"
+  },
+
+  "support_faq": [
+    {
+      "q": "How do I set up my iPhone to trace?",
+      "a": "Put your paper on a table and hold your iPhone 20–40 cm above it, on a stand, a glass or a stack of books, with the camera pointing down. Open a template, then pinch, drag and rotate the outline until it sits where you want it on the page. Tap **Lock** so a stray touch doesn't move it, then draw along the faint lines with your own pencil."
+    },
+    {
+      "q": "I don't have a stand. Can I still trace?",
+      "a": "Yes. Use **Freeze** to hold the current camera frame still, or turn on **Light Box** from the More menu: the screen shows the outline on bright white, you tap **Lock touch** and lay thin paper directly on your iPhone to trace it like a light table. Light Box does not need the camera."
+    },
+    {
+      "q": "How do I turn my own photo into something to trace?",
+      "a": "Tap **Import photo** on Home (or **Paste** if you copied an image, or share a photo to **Trace with TraceAR** from Photos or Safari). Crop it, then pick a style such as Outline or Bold Lines and a subject preset. Everything is processed on your iPhone."
+    },
+    {
+      "q": "Can I trace a name or a message?",
+      "a": "Yes. Tap **Text** on Home, or **Create your own** in the Letters category, type up to 40 characters, choose a font and Outline or Filled, then tap **Trace this**."
+    },
+    {
+      "q": "What's free and what do I get with TraceAR Pro?",
+      "a": "Free: tracing with flash, grid, Freeze and Light Box, free templates and lessons, photo-to-sketch with the basic styles, and the free fonts. Pro unlocks all templates and lessons, every sketch style and background removal, line colors and edge highlight, Strobe, paper calibration and all Text Trace fonts. Choose Weekly, Monthly or Yearly (renews automatically; Yearly starts with a 3-day free trial) or Lifetime (pay once)."
+    },
+    {
+      "q": "I said no to camera access.",
+      "a": "Open iOS **Settings → TraceAR** and turn Camera on. Until then you can still trace with **Light Box**, which does not use the camera."
+    }
+  ]
+}
