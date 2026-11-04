@@ -2,10 +2,10 @@
   "slug": "loudly",
   "name": "Loudly",
   "device_name": "Loudly",
-  "tagline": "A louder, cleaner player for your own music and videos — works offline, free, no account, no subscription.",
+  "tagline": "A louder, cleaner player for your own music and videos — works offline, no account, no subscription.",
   "app_store_id": "",
   "contact_email": "khoald2302.ai@gmail.com",
-  "last_updated": "2026-10-12",
+  "last_updated": "2026-11-04",
   "terms_url": "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/",
   "ads": false,
   "tracking": false,
@@ -18,6 +18,12 @@
       "purpose": "Measures how the app is used (for example whether onboarding was finished, which features are opened) so we can fix problems and improve Loudly. Not used for advertising or cross-app tracking. You can turn it off at any time in Settings → Privacy → Share usage data.",
       "data": "usage events and their settings (never your music, videos or file names), an app-instance identifier, app version, device model, OS version, locale, approximate region derived from your IP address",
       "policy_url": "https://firebase.google.com/support/privacy"
+    },
+    "apple_storekit": {
+      "name": "Apple (App Store purchases)",
+      "purpose": "Processes the one-time Loudly Plus purchase and verifies that you own it.",
+      "data": "your purchase receipt, handled by Apple. We never see your payment details, Apple Account or name.",
+      "policy_url": "https://www.apple.com/legal/privacy/"
     }
   },
   "data_sent": [
@@ -25,6 +31,11 @@
       "what": "Usage events (never your music, videos or file names), app-instance identifier, app and device info, approximate region",
       "to": "google_analytics",
       "why": "Understand how the app is used and improve it — only while **Share usage data** is on"
+    },
+    {
+      "what": "Your purchase receipt",
+      "to": "apple_storekit",
+      "why": "Confirm that you own Loudly Plus"
     }
   ],
   "stored_on_device": [
@@ -37,7 +48,7 @@
     "What you listen to or watch — your music, videos, file names and playback history never leave your iPhone.",
     "Your advertising identifier (IDFA), precise location, contacts or browsing history. Loudly does not track you across apps and never shows the App Tracking Transparency prompt.",
     "Crash reports, because the app includes no crash-reporting SDK.",
-    "Payment details — Loudly 1.0 is free and has no in-app purchases."
+    "Payment details — Loudly Plus is bought through Apple, and we never see your card, Apple Account or name."
   ],
   "permissions": [
     {
@@ -65,12 +76,16 @@
       "a": "Loudly applies a real, measured boost with a built-in limiter, so loud passages are held back instead of clipping. The exact boost depends on the track; very loud masters gain less."
     },
     {
-      "q": "Is Loudly free?",
-      "a": "Yes. Every feature in Loudly 1.0 is free — no account, no subscription and no in-app purchases."
+      "q": "Is Loudly free? What does Loudly Plus add?",
+      "a": "Loudly is free to download, and boost, the limiter and Volume Checkup are free for everyone. **Loudly Plus** is a one-time purchase — no subscription — that adds unlimited imports (the free plan holds 3 tracks), all 6 EQ presets, saving your custom EQ, and video playback."
     },
     {
       "q": "How do I add my music and videos?",
       "a": "Import files from the Files app or AirDrop, or pick DRM-free songs from your music library. Streaming-service downloads and protected songs cannot be imported because they are locked to their own apps."
+    },
+    {
+      "q": "How do I restore Loudly Plus?",
+      "a": "Tap **Restore Purchases** on the Loudly Plus screen or in Settings. Make sure you are signed in with the same Apple Account you used to buy."
     },
     {
       "q": "How do I get a refund?",
@@ -81,5 +96,5 @@
       "a": "Remove tracks in the app, or delete the app. Your files and settings live only on your iPhone, so deleting the app removes them completely. To stop anonymous usage measurement, turn off **Share usage data** in Settings → Privacy."
     }
   ],
-  "purchases": false
+  "purchases": true
 }
