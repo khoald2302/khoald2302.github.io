@@ -1,0 +1,99 @@
+{
+  "slug": "plugmoji",
+  "name": "Plugmoji",
+  "device_name": "Plugmoji",
+  "tagline": "Cute characters that hang under your iPhone battery icon, charging screens, battery widgets and Live Activities — no ads, no account.",
+  "app_store_id": "6833495635",
+  "contact_email": "khoald2302.ai@gmail.com",
+  "last_updated": "2026-11-11",
+  "terms_url": "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/",
+  "ads": false,
+  "tracking": false,
+  "analytics": true,
+  "storage_summary": "Your designs, wallpapers, widgets, charging screens, the characters you make from your own photos and your settings are stored only on your iPhone (and in your iPhone's own iCloud backup if you use one). Characters are cut out from your photos on your iPhone — your photos are never uploaded. The only data that leaves your iPhone is anonymous usage measurement and crash reports, which you can turn off at any time.",
+  "nothing_sent_detail": "Your photos, wallpapers and designs are created on your iPhone and are never sent anywhere.",
+  "processors": {
+    "firebase": {
+      "name": "Google Firebase (Google Analytics for Firebase, Crashlytics)",
+      "purpose": "Measures how the app is used (for example whether onboarding was finished, a wallpaper was saved or the Pro screen was opened) and reports crashes, so we can fix problems and improve Plugmoji. Not used for advertising or cross-app tracking. You can turn it off at any time in Settings → Privacy & data → Share usage statistics.",
+      "data": "usage events and their settings (never your photos, wallpapers or designs), an app-instance identifier, app version, device model, OS version, locale, approximate region derived from your IP address, and crash logs",
+      "policy_url": "https://firebase.google.com/support/privacy"
+    },
+    "apple_storekit": {
+      "name": "Apple (App Store purchases)",
+      "purpose": "Processes the Plugmoji Pro subscription or one-time purchase and verifies that you own it.",
+      "data": "your purchase receipt, handled by Apple. We never see your payment details, Apple Account or name",
+      "policy_url": "https://www.apple.com/legal/privacy/"
+    }
+  },
+  "data_sent": [
+    {
+      "what": "Usage events (never your photos, wallpapers or designs), app-instance identifier, app and device info, approximate region, crash logs",
+      "to": "firebase",
+      "why": "Understand how the app is used, fix crashes and improve it — only while **Share usage statistics** is on"
+    },
+    {
+      "what": "Your purchase receipt",
+      "to": "apple_storekit",
+      "why": "Confirm that you own Plugmoji Pro"
+    }
+  ],
+  "stored_on_device": [
+    "The wallpapers, charging screens and widgets you design, and the characters and battery styles you choose.",
+    "Characters you create from your own photos (the cut-out image is saved in the app's private storage on your iPhone so widgets and Live Activities can show it).",
+    "Your settings, sounds and charging history.",
+    "Delete everything with **Delete my data** in Settings, or by deleting the app."
+  ],
+  "not_collected": [
+    "Your name, email address or any account, because Plugmoji has no sign-in.",
+    "Your photos. When you make a character from a photo, the background is removed on your iPhone with Apple's on-device Vision framework; the photo is never uploaded.",
+    "Your advertising identifier (IDFA), precise location, contacts or browsing history. Plugmoji shows no ads, does not track you across apps and never shows the App Tracking Transparency prompt.",
+    "Payment details — Plugmoji Pro is bought through Apple, and we never see your card, Apple Account or name."
+  ],
+  "permissions": [
+    {
+      "name": "Photos (add only)",
+      "why": "to save the wallpapers and Live Photos you create to your Photos library. Plugmoji cannot read your library with this permission. When you make a character from a photo, you pick that one photo with the system photo picker, which gives the app only the photo you choose."
+    }
+  ],
+  "your_controls": [
+    "**Turn off usage statistics and crash reports** in Settings → Privacy & data → Share usage statistics. Nothing else in the app changes.",
+    "**Turn off Live Activities** for Plugmoji in iOS Settings → Plugmoji at any time.",
+    "**Delete a design or a character you made** in the app at any time.",
+    "**Delete all your data** with Settings → Delete my data, or by deleting the app."
+  ],
+  "support_faq": [
+    {
+      "q": "Can Plugmoji change the iPhone's battery icon?",
+      "a": "No. iOS does not let any app change the system battery icon. Plugmoji makes Lock Screen wallpapers where your character hangs right under the real battery icon, plus charging screens, widgets and Live Activities that show your character with your battery level."
+    },
+    {
+      "q": "How do I set a Plugmoji wallpaper?",
+      "a": "Save the wallpaper to Photos in the app, then in the Photos app open it, tap Share → Use as Wallpaper. The in-app Setup Guide shows each step. If your character looks misaligned, turn off **Perspective Zoom** when setting the wallpaper."
+    },
+    {
+      "q": "Why doesn't the charging screen appear when the app is closed?",
+      "a": "iOS only lets an app show its charging screen when it is open. To open it automatically when you plug in, create a Shortcuts automation (\"When charger is connected → open Plugmoji\"). The Setup Guide in the app walks you through it."
+    },
+    {
+      "q": "Why doesn't my Live Photo wallpaper move?",
+      "a": "Make sure the Live button is on when you set the wallpaper, then touch and hold the Lock Screen. Live wallpapers do not move on the Home Screen or in Low Power Mode."
+    },
+    {
+      "q": "What does Plugmoji Pro include?",
+      "a": "All characters, battery styles, wallpapers, charging screens and widget templates, animated characters on the Lock Screen, and characters made from your own photos. Many characters and templates are free for everyone."
+    },
+    {
+      "q": "How do I get a refund?",
+      "a": "Refunds are handled by Apple. Request one at [reportaproblem.apple.com](https://reportaproblem.apple.com)."
+    },
+    {
+      "q": "How do I delete my data?",
+      "a": "Use **Delete my data** in Settings, or delete the app. Your designs live only on your iPhone, so deleting the app removes them. To stop anonymous usage statistics and crash reports, turn off **Share usage statistics** in Settings → Privacy & data."
+    }
+  ],
+  "purchases": true,
+  "subscription": {
+    "restore_location": "on the Plugmoji Pro screen, or in Settings → Restore Purchases"
+  }
+}
