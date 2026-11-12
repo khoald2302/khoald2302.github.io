@@ -1,0 +1,116 @@
+{
+  "slug": "kindlock",
+  "name": "Kindlock: Screen Time Limit",
+  "device_name": "Kindlock",
+  "tagline": "Block the apps that pull you in, on your own schedule — calmly, privately, with no account.",
+  "app_store_id": "6833516179",
+  "contact_email": "khoald2302.ai@gmail.com",
+  "last_updated": "2026-11-12",
+  "terms_url": "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/",
+  "ads": false,
+  "tracking": false,
+  "analytics": true,
+  "storage_summary": "Your Screen Time data never leaves your device: the apps and websites you block, your plans, schedules, limits, focus sessions and history stay on your iPhone. The only data that leaves it is anonymous usage measurement, which never includes any of that.",
+  "processors": {
+    "google_analytics": {
+      "name": "Google Analytics for Firebase",
+      "purpose": "Measures which features are used and which errors happen (for example whether onboarding was finished, a plan was saved, a focus session was started or the Pro screen was opened) so we can fix problems and improve Kindlock. Not used for advertising or cross-app tracking, and it does not read your advertising identifier.",
+      "data": "usage events and fixed error codes (never the apps or websites you block, your group or plan names, your schedules, your screen time, your unlock key or code, or the reasons you give), the Pro plan chosen and whether a purchase succeeded, an app-instance identifier, app version, device model, OS version, locale and approximate region derived from your IP address",
+      "policy_url": "https://firebase.google.com/support/privacy"
+    },
+    "apple_storekit": {
+      "name": "Apple (App Store purchases)",
+      "purpose": "Processes Kindlock Pro subscriptions and the one-time Lifetime purchase, including Family Sharing, and verifies that you own them.",
+      "data": "your purchase and subscription transactions, handled by Apple. We never see your payment details, Apple Account or name",
+      "policy_url": "https://www.apple.com/legal/privacy/"
+    }
+  },
+  "data_sent": [
+    {
+      "what": "Usage events and fixed error codes, app version, device model, OS version, an app-instance identifier and approximate region. Never the apps or websites you block, plan names, schedules or screen time",
+      "to": "google_analytics",
+      "why": "Understand which features are used and which errors happen, so we can fix and improve the app"
+    },
+    {
+      "what": "Purchase and subscription transactions for Kindlock Pro",
+      "to": "apple_storekit",
+      "why": "Process payments and unlock Pro; handled entirely by Apple"
+    }
+  ],
+  "stored_on_device": [
+    "The apps, categories and websites you choose to block. iOS gives Kindlock only opaque tokens for apps and categories, so the app itself never learns their names.",
+    "Your app groups, schedules, daily limits, focus sessions, Gentle and Strict settings, and challenges.",
+    "Your plan history: days you kept a plan, focus sessions finished, extra-time requests and the reasons you typed.",
+    "A one-way hash of your unlock key, NFC tag or partner code, never the key itself.",
+    "Screen time numbers in Insights are drawn by Apple's own Screen Time report on your iPhone; Kindlock cannot read them as numbers and never sends them anywhere.",
+    "Delete everything at any time with **Settings → Delete all data**, or by deleting the app."
+  ],
+  "not_collected": [
+    "Your name, email address or any account, because Kindlock has no sign-in and no server of its own.",
+    "The apps, websites and categories you block, your browsing history or how long you use any app.",
+    "Your advertising identifier (IDFA), precise location, contacts or photos. Kindlock never shows the App Tracking Transparency prompt.",
+    "Camera images: when you scan an unlock key, nothing is recorded or saved.",
+    "Crash reports, because the app includes no crash-reporting SDK.",
+    "Payment details, which are handled by Apple."
+  ],
+  "permissions": [
+    {
+      "name": "Screen Time (Family Controls)",
+      "why": "to block the apps and websites you choose, run your schedules and limits, and show your screen time report. Everything is processed on your iPhone by Apple's Screen Time; you can revoke access at any time in iOS Settings → Screen Time."
+    },
+    {
+      "name": "Notifications",
+      "why": "to tell you before a schedule starts or a limit runs out, to let you ask for more time, and to remind you before a free trial ends. Notifications are scheduled on your iPhone."
+    },
+    {
+      "name": "Camera",
+      "why": "only if you choose an unlock key for Strict mode, to scan that key. Nothing is recorded or saved; only a one-way hash of the key is kept on your iPhone."
+    },
+    {
+      "name": "NFC",
+      "why": "only if you choose an NFC tag as your unlock method, to write and read your own tag."
+    }
+  ],
+  "your_controls": [
+    "**Delete all your data** in **Settings → Delete all data**, or by deleting the app.",
+    "**Turn off every block** in **Settings → Protection status → Reset all blocks**.",
+    "**Revoke Screen Time access** in iOS **Settings → Screen Time**, or revoke Notifications or Camera access in iOS Settings."
+  ],
+  "subscription": {
+    "restore_location": "in **Settings → Subscription**, or at the bottom of the Kindlock Pro screen"
+  },
+  "support_faq": [
+    {
+      "q": "How do I turn Kindlock off?",
+      "a": "To pause one plan, open **Plans** and switch it off (a Strict plan asks for its unlock first). To turn off every block, open **Settings → Protection status → Reset all blocks**. To remove access entirely, open iOS **Settings → Screen Time**. Kindlock always tells you honestly when protection is off."
+    },
+    {
+      "q": "An app is still blocked after I deleted Kindlock or a plan.",
+      "a": "iOS sometimes keeps a block after an app is removed. Try these in order: reinstall Kindlock; open **Settings → Protection status → Reset all blocks**; turn off Screen Time access for Kindlock in iOS **Settings → Screen Time**; restart your iPhone. Your plans stay saved through the second step."
+    },
+    {
+      "q": "I can't turn on Screen Time access.",
+      "a": "Check iOS **Settings → Screen Time → Content & Privacy Restrictions** and make sure nothing blocks changes to Screen Time. Another app, or a device-management profile from work or school, may be managing Screen Time. On a child account in Family Sharing, a parent has to allow it. Then open Kindlock and tap **Try again**."
+    },
+    {
+      "q": "I lost my unlock key, code or tag.",
+      "a": "On the unlock screen choose **I can't use my key**. After a 30-minute wait you can unlock and set up a new one. You can also turn off Screen Time access in iOS Settings at any time."
+    },
+    {
+      "q": "Why do the numbers in Insights differ from iOS Settings?",
+      "a": "Insights are drawn by Apple's own Screen Time report. Differences can appear, for example when Share Across Devices is on or when the report last refreshed. Tap **Reload** under the report."
+    },
+    {
+      "q": "What is Gentle mode?",
+      "a": "A plan that never blocks completely. Each time you open an app in the group, Kindlock asks you to take a short pause first, then you choose to open it for a set time or not now."
+    },
+    {
+      "q": "Does Kindlock Pro work with Family Sharing?",
+      "a": "Yes. Annual and Lifetime Pro can be shared with up to 5 family members through Apple Family Sharing. Monthly cannot be shared."
+    },
+    {
+      "q": "What happens to my plans if Pro ends?",
+      "a": "Nothing is deleted. Your groups, plans and history stay on your iPhone; you choose which plans stay on within the free limits."
+    }
+  ]
+}
