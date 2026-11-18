@@ -1,0 +1,150 @@
+{
+  "slug": "snugroom",
+  "name": "Snugroom: Cozy Focus Timer",
+  "device_name": "Snugroom",
+  "tagline": "A tiny hand-drawn room where a cat studies with you: Pomodoro timer, ambient sound mixer and coins to decorate. No ads, no account.",
+  "app_store_id": "6834712979",
+  "contact_email": "khoald2302.ai@gmail.com",
+  "last_updated": "2026-11-18",
+  "terms_url": "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/",
+  "ads": false,
+  "tracking": false,
+  "analytics": true,
+  "storage_summary": "Your focus sessions, labels, to-dos, sound mixes, coins, room and settings stay on your iPhone or iPad. If you turn on iCloud sync, they are kept in your own private iCloud, which we cannot read. The only data that reaches us is anonymous usage measurement and crash reports, which never include any of that content.",
+  "processors": {
+    "google_analytics": {
+      "name": "Google Analytics for Firebase",
+      "purpose": "Measures which features are used and which errors happen (for example whether onboarding was finished, a focus session was started or completed, or the Snugroom+ screen was opened) so we can fix problems and improve Snugroom. Not used for advertising or cross-app tracking, and it does not read your advertising identifier.",
+      "data": "usage events with fixed values such as session length in minutes, where a session was started from and fixed error codes (never your label names, to-dos, mix names or imported sounds), the Snugroom+ plan chosen and whether a purchase succeeded, an app-instance identifier, app version, device model, OS version, locale and approximate region derived from your IP address",
+      "policy_url": "https://firebase.google.com/support/privacy"
+    },
+    "firebase_crashlytics": {
+      "name": "Firebase Crashlytics",
+      "purpose": "Collects crash reports and app-performance information so we can find and fix bugs.",
+      "data": "crash stack traces, app version, device model, OS version, fixed error codes and an installation identifier. Never the content you create in the app",
+      "policy_url": "https://firebase.google.com/support/privacy"
+    },
+    "apple_storekit": {
+      "name": "Apple (App Store purchases)",
+      "purpose": "Processes the Snugroom+ yearly subscription and the one-time Lifetime purchase and verifies that you own them.",
+      "data": "your purchase and subscription transactions, handled by Apple. We never see your payment details, Apple Account or name",
+      "policy_url": "https://www.apple.com/legal/privacy/"
+    },
+    "apple_weatherkit": {
+      "name": "Apple Weather (WeatherKit)",
+      "purpose": "Only if you turn on Real weather: looks up the current weather so the window in your room can show rain, snow or a clear sky.",
+      "data": "your approximate location, sent to Apple for the weather lookup. Not stored by us",
+      "policy_url": "https://www.apple.com/legal/privacy/"
+    },
+    "apple_icloud": {
+      "name": "Apple iCloud (CloudKit)",
+      "purpose": "Only if you turn on iCloud sync: keeps your sessions, labels, to-dos, mixes, coins, room and imported sounds in sync across your devices.",
+      "data": "the app content listed above, stored in your own private iCloud database. We cannot access it",
+      "policy_url": "https://www.apple.com/legal/privacy/"
+    }
+  },
+  "data_sent": [
+    {
+      "what": "Usage events with fixed values, fixed error codes, app version, device model, OS version, an app-instance identifier and approximate region. Never your labels, to-dos, mixes or sounds",
+      "to": "google_analytics",
+      "why": "Understand which features are used and which errors happen, so we can fix and improve the app"
+    },
+    {
+      "what": "Crash reports and performance information",
+      "to": "firebase_crashlytics",
+      "why": "Find and fix crashes and slowdowns"
+    },
+    {
+      "what": "Purchase and subscription transactions for Snugroom+",
+      "to": "apple_storekit",
+      "why": "Process payments and unlock Snugroom+; handled entirely by Apple"
+    },
+    {
+      "what": "Your approximate location, only when Real weather is on",
+      "to": "apple_weatherkit",
+      "why": "Show the weather outside your room's window"
+    },
+    {
+      "what": "Your sessions, labels, to-dos, mixes, coins, room and imported sounds, only when iCloud sync is on",
+      "to": "apple_icloud",
+      "why": "Keep your data in sync across your own devices, in your private iCloud"
+    }
+  ],
+  "stored_on_device": [
+    "Your focus sessions and statistics, labels, to-dos, saved sound mixes, coins, room decorations, chosen companion and settings.",
+    "Sounds you import yourself. They are copied into the app on your device and never uploaded to us.",
+    "The apps you choose to rest during focus. iOS gives Snugroom only opaque tokens, so the app never learns their names.",
+    "Delete everything at any time with **Settings → Delete all data**, or by deleting the app. Your Snugroom+ purchase is not affected and can be restored."
+  ],
+  "not_collected": [
+    "Your name, email address or any account, because Snugroom has no sign-in and no server of its own.",
+    "Your label names, to-dos, mix names, imported sounds or anything else you type or create.",
+    "Your advertising identifier (IDFA), precise location, contacts, photos or microphone. Snugroom never shows the App Tracking Transparency prompt.",
+    "The apps you block, your browsing history or how long you use any other app.",
+    "Payment details, which are handled by Apple."
+  ],
+  "permissions": [
+    {
+      "name": "Notifications",
+      "why": "to tell you when a focus or break phase ends and to remind you 2 days before a free trial ends. Notifications are scheduled on your device."
+    },
+    {
+      "name": "Approximate location",
+      "why": "only if you turn on **Real weather**, to look up the weather outside your window through Apple Weather. Never precise location, never stored."
+    },
+    {
+      "name": "Screen Time (Family Controls)",
+      "why": "only if you turn on **App blocking**, to rest the apps you choose while a focus session runs. Everything is handled on your device by Apple's Screen Time; you can revoke access at any time in iOS Settings → Screen Time."
+    },
+    {
+      "name": "Files",
+      "why": "only when you import your own sound, to copy the file you pick into the app."
+    }
+  ],
+  "your_controls": [
+    "**Delete all your data** in **Settings → Delete all data**, or by deleting the app.",
+    "**Turn off Real weather, iCloud sync or App blocking** at any time in **Settings**.",
+    "**Revoke Location, Notifications or Screen Time access** in iOS Settings."
+  ],
+  "subscription": {
+    "restore_location": "in **Settings → Restore Purchases**, or at the bottom of the Snugroom+ screen"
+  },
+  "support_faq": [
+    {
+      "q": "Can I listen to Spotify or Apple Music while Snugroom plays sounds?",
+      "a": "Yes. **Play with other audio** is on by default in **Settings**, so your rain or fireplace plays on top of your own music. Turn it off if you want Snugroom to pause other audio."
+    },
+    {
+      "q": "Does the timer keep running when I lock my phone?",
+      "a": "Yes. The timer and sounds keep going in the background, and the current phase shows on your Lock Screen and in the Dynamic Island. You get a notification when each phase ends if notifications are allowed."
+    },
+    {
+      "q": "How do I earn coins?",
+      "a": "Every real minute of focus earns coins, plus a small bonus for finishing a session. Spend them in the **Shop** on lamps, plants, shelves, rugs, wall art and curtains, then place them in your room."
+    },
+    {
+      "q": "What is Honest mode?",
+      "a": "An optional setting. If you leave Snugroom during a focus session, those minutes don't count toward coins or stats. Locking your screen is fine. Nothing is ever taken away."
+    },
+    {
+      "q": "How do I cancel the free trial or subscription?",
+      "a": "Open iOS **Settings → [your name] → Subscriptions → Snugroom** and tap Cancel at least 24 hours before the trial or period ends. Snugroom also reminds you 2 days before a free trial ends."
+    },
+    {
+      "q": "I bought Snugroom+ but it's not unlocked.",
+      "a": "Tap **Restore Purchases** in **Settings** or at the bottom of the Snugroom+ screen, signed in with the same Apple Account you used to buy. Lifetime and active subscriptions are restored."
+    },
+    {
+      "q": "What happens to my room if Snugroom+ ends?",
+      "a": "Nothing is removed. Rooms, decor, companions and saved mixes you already have stay in your room; you just can't add new Snugroom+ items until you subscribe again."
+    },
+    {
+      "q": "How do I sync between my iPhone and iPad?",
+      "a": "Turn on **iCloud sync** in **Settings** on both devices, signed in to the same iCloud account. Your data stays in your own private iCloud."
+    },
+    {
+      "q": "App blocking isn't working.",
+      "a": "Open **Settings → App blocking**, check that Screen Time access is granted and that you chose at least one app. Apps are rested only while a focus session runs, and pausing a session lifts the block."
+    }
+  ]
+}
