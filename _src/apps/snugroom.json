@@ -5,12 +5,12 @@
   "tagline": "A tiny illustrated room where a cat studies with you: Pomodoro timer, ambient sound mixer and coins to decorate. No ads, no account.",
   "app_store_id": "6834712979",
   "contact_email": "khoald2302.ai@gmail.com",
-  "last_updated": "2026-11-18",
+  "last_updated": "2026-11-24",
   "terms_url": "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/",
   "ads": false,
   "tracking": false,
   "analytics": true,
-  "storage_summary": "Your focus sessions, labels, to-dos, sound mixes, coins, room and settings stay on your iPhone or iPad. If you turn on iCloud sync, they are kept in your own private iCloud, which we cannot read. The only data that reaches us is anonymous usage measurement and crash reports, which never include any of that content.",
+  "storage_summary": "Your focus sessions, labels, to-dos, sound mixes, coins, room and settings stay on your iPhone or iPad. The only data that reaches us is anonymous usage measurement and crash reports, which never include any of that content.",
   "processors": {
     "google_analytics": {
       "name": "Google Analytics for Firebase",
@@ -26,7 +26,7 @@
     },
     "apple_storekit": {
       "name": "Apple (App Store purchases)",
-      "purpose": "Processes the Snugroom+ yearly subscription and the one-time Lifetime purchase and verifies that you own them.",
+      "purpose": "Processes the Snugroom+ weekly and yearly subscriptions and the one-time Lifetime purchase and verifies that you own them.",
       "data": "your purchase and subscription transactions, handled by Apple. We never see your payment details, Apple Account or name",
       "policy_url": "https://www.apple.com/legal/privacy/"
     },
@@ -34,12 +34,6 @@
       "name": "Apple Weather (WeatherKit)",
       "purpose": "Only if you turn on Real weather: looks up the current weather so the window in your room can show rain, snow or a clear sky.",
       "data": "your approximate location, sent to Apple for the weather lookup. Not stored by us",
-      "policy_url": "https://www.apple.com/legal/privacy/"
-    },
-    "apple_icloud": {
-      "name": "Apple iCloud (CloudKit)",
-      "purpose": "Only if you turn on iCloud sync: keeps your sessions, labels, to-dos, mixes, coins, room and imported sounds in sync across your devices.",
-      "data": "the app content listed above, stored in your own private iCloud database. We cannot access it",
       "policy_url": "https://www.apple.com/legal/privacy/"
     }
   },
@@ -63,11 +57,6 @@
       "what": "Your approximate location, only when Real weather is on",
       "to": "apple_weatherkit",
       "why": "Show the weather outside your room's window"
-    },
-    {
-      "what": "Your sessions, labels, to-dos, mixes, coins, room and imported sounds, only when iCloud sync is on",
-      "to": "apple_icloud",
-      "why": "Keep your data in sync across your own devices, in your private iCloud"
     }
   ],
   "stored_on_device": [
@@ -86,7 +75,7 @@
   "permissions": [
     {
       "name": "Notifications",
-      "why": "to tell you when a focus or break phase ends and to remind you 2 days before a free trial ends. Notifications are scheduled on your device."
+      "why": "to tell you when a focus or break phase ends and to remind you 1 day before a free trial ends. Notifications are scheduled on your device."
     },
     {
       "name": "Approximate location",
@@ -103,7 +92,7 @@
   ],
   "your_controls": [
     "**Delete all your data** in **Settings → Delete all data**, or by deleting the app.",
-    "**Turn off Real weather, iCloud sync or App blocking** at any time in **Settings**.",
+    "**Turn off Real weather or App blocking** at any time in **Settings**.",
     "**Revoke Location, Notifications or Screen Time access** in iOS Settings."
   ],
   "subscription": {
@@ -128,7 +117,7 @@
     },
     {
       "q": "How do I cancel the free trial or subscription?",
-      "a": "Open iOS **Settings → [your name] → Subscriptions → Snugroom** and tap Cancel at least 24 hours before the trial or period ends. Snugroom also reminds you 2 days before a free trial ends."
+      "a": "Open iOS **Settings → [your name] → Subscriptions → Snugroom** and tap Cancel at least 24 hours before the trial or period ends. Snugroom also reminds you 1 day before a free trial ends."
     },
     {
       "q": "I bought Snugroom+ but it's not unlocked.",
@@ -137,10 +126,6 @@
     {
       "q": "What happens to my room if Snugroom+ ends?",
       "a": "Nothing is removed. Rooms, decor, companions and saved mixes you already have stay in your room; you just can't add new Snugroom+ items until you subscribe again."
-    },
-    {
-      "q": "How do I sync between my iPhone and iPad?",
-      "a": "Turn on **iCloud sync** in **Settings** on both devices, signed in to the same iCloud account. Your data stays in your own private iCloud."
     },
     {
       "q": "App blocking isn't working.",
