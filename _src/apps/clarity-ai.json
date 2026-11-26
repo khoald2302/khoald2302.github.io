@@ -5,7 +5,7 @@
   "tagline": "Turn a messy brain dump into small, doable steps.",
   "app_store_id": "6763340386",
   "contact_email": "khoald2302.ai@gmail.com",
-  "last_updated": "2026-09-29",
+  "last_updated": "2026-11-26",
   "ads": false,
   "tracking": false,
   "storage_summary": "Your tasks, Brain Dumps and settings are stored only on your device.",
@@ -32,6 +32,12 @@
       "purpose": "Tells us which features are used, reports crashes, and delivers app configuration. Never used for advertising or cross-app tracking.",
       "data": "in-app usage and purchase events, device model, OS version, app-generated identifiers and crash logs",
       "policy_url": "https://firebase.google.com/support/privacy"
+    },
+    "apple_ads": {
+      "name": "Apple (AdServices and AdAttributionKit)",
+      "purpose": "From version 1.12, measures whether our Apple Ads work without tracking you. Apple tells us, once per install, whether the install came from an Apple Ads campaign and, if so, which campaign, ad group and keyword. For installs from other ad networks, iOS itself sends the ad network an anonymous, aggregated conversion value (for example: onboarding finished, first AI result, purchase) — the app never sees or shares who you are.",
+      "data": "an anonymous attribution token created by iOS (no advertising identifier), and a coarse conversion value that iOS sends on the app's behalf",
+      "policy_url": "https://www.apple.com/legal/privacy/"
     }
   },
   "data_sent": [
@@ -59,7 +65,7 @@
       "why": "Convert speech to text"
     },
     {
-      "what": "Usage and purchase events, device model, OS version, app identifiers",
+      "what": "Usage and purchase events, device model, OS version, app identifiers, and whether the install came from an Apple Ads campaign (campaign, ad group and keyword IDs)",
       "to": "firebase",
       "why": "Understand usage and improve the app"
     },
@@ -67,6 +73,11 @@
       "what": "Crash and performance reports",
       "to": "firebase",
       "why": "Find and fix bugs"
+    },
+    {
+      "what": "Anonymous attribution token and a coarse conversion value — no advertising identifier",
+      "to": "apple_ads",
+      "why": "Measure whether an ad led to the install"
     }
   ],
   "stored_on_device": [
