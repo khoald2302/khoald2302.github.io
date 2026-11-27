@@ -5,7 +5,7 @@
   "tagline": "Turn a messy brain dump into small, doable steps.",
   "app_store_id": "6763340386",
   "contact_email": "khoald2302.ai@gmail.com",
-  "last_updated": "2026-11-26",
+  "last_updated": "2026-11-27",
   "ads": false,
   "tracking": false,
   "storage_summary": "Your tasks, Brain Dumps and settings are stored only on your device.",
@@ -35,7 +35,7 @@
     },
     "apple_ads": {
       "name": "Apple (AdServices and AdAttributionKit)",
-      "purpose": "From version 1.12, measures whether our Apple Ads work without tracking you. Apple tells us, once per install, whether the install came from an Apple Ads campaign and, if so, which campaign, ad group and keyword. For installs from other ad networks, iOS itself sends the ad network an anonymous, aggregated conversion value (for example: onboarding finished, first AI result, purchase) — the app never sees or shares who you are.",
+      "purpose": "From version 1.13, measures whether our Apple Ads work without tracking you. Apple tells us, once per install, whether the install came from an Apple Ads campaign and, if so, which campaign, ad group and keyword. For installs from other ad networks, iOS itself sends the ad network an anonymous, aggregated conversion value (for example: onboarding finished, first AI result, purchase) — the app never sees or shares who you are.",
       "data": "an anonymous attribution token created by iOS (no advertising identifier), and a coarse conversion value that iOS sends on the app's behalf",
       "policy_url": "https://www.apple.com/legal/privacy/"
     }
